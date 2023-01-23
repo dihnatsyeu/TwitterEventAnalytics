@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.di.twitter.analytics.app.config.TwitterExtractorConfig, com.di.twitter.analytics.app.config.RetryConfigData, com.di.twitter.analytics.app.config.KafkaConfigData

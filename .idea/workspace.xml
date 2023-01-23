@@ -5,21 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e339b457-8460-4348-8cc7-27bf9d5db719" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-storage/kafka-producer/src/main/java/com/di/twitter/analytics/producer/config/service/impl/TwitterKafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-storage/kafka-producer/src/main/java/com/di/twitter/analytics/producer/config/service/impl/TwitterKafkaProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twitter-stream-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/twitter-stream-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twitter-stream-service/src/main/java/com/di/twitter/analytics/stream/service/listener/TwitterStatusListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/twitter-stream-service/src/main/java/com/di/twitter/analytics/stream/service/listener/TwitterStatusListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twitter-stream-service/src/main/java/com/di/twitter/analytics/stream/service/transformer/TwitterStatusToAvroTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/twitter-stream-service/src/main/java/com/di/twitter/analytics/stream/service/transformer/TwitterStatusToAvroTransformer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiPersistence">
+    <option name="context" value="arn:aws:eks:us-east-1:174736264861:cluster/dev-eks-cluster" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="/opt/homebrew/Cellar/maven/3.8.7/libexec" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="2K5jc30GRGJSVMqQEb36S4cpJd4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -27,24 +46,81 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "corretto-11",
+    "last_opened_file_path": "/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/twitter-extractor/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "4a8bb7c103214bb0997a09e90c920bd1"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/twitter-extractor/src/main/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/event-stream/kafka-model/src/main/avro" />
+      <recent name="$PROJECT_DIR$/app-config/src/main/resources" />
+      <recent name="$PROJECT_DIR$/app-config/src/main" />
+      <recent name="$PROJECT_DIR$/app-config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.TwitterExtractionApplication">
+    <configuration name="TwitterExtractionApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="twitter-stream-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.twitter.extractor.TwitterExtractionApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TwitterExtractionApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="twitter-stream-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.di.twitter.analytics.stream.service.TwitterExtractionApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TwitterExtractionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
+      <envs>
+        <env name="TWITTER_BEARER_TOKEN" value="AAAAAAAAAAAAAAAAAAAAAFSKlAEAAAAAFgFRBV8UfmELjmfblEOueGEqjtw%3DThpF45XoZPEUaEnNqxNh2lrVSF1agyzYZvYy1gzV2xtVplvbxW" />
+        <env name="oauth.consumerKey" value="zwYwTewMSMo9NOGyhKbIMCXxk" />
+        <env name="oauth.consumerSecret" value="ucQ1Gudp35VcW1dpKvU57O8w9clgfQie3RlinUnRnErLj9aNB3" />
+        <env name="oauth.accessToken" value="872470117879357440-47ek5HN8FDYfGZHZ9XF1LsiNUKRQfLF" />
+        <env name="oauth.accessTokenSecret" value="Gcl1YRuYdX53C0KZEunWtaOaGw0fanmcjDIT5A5J7g665" />
+      </envs>
+      <module name="twitter-stream-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.di.twitter.analytics.stream.service.TwitterExtractionApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.TwitterExtractionApplication" />
+      <item itemvalue="Spring Boot.TwitterExtractionApplication (1)" />
+      <item itemvalue="Spring Boot.TwitterExtractionApplication (2)" />
+    </list>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="e339b457-8460-4348-8cc7-27bf9d5db719" name="Changes" comment="" />
@@ -53,7 +129,13 @@
       <option name="presentableId" value="Default" />
       <updated>1673271415956</updated>
       <workItem from="1673271417308" duration="4115000" />
-      <workItem from="1673350760695" duration="815000" />
+      <workItem from="1673350760695" duration="3167000" />
+      <workItem from="1673353938808" duration="6527000" />
+      <workItem from="1673436106373" duration="7370000" />
+      <workItem from="1673543244992" duration="6941000" />
+      <workItem from="1673869761827" duration="8055000" />
+      <workItem from="1674128251530" duration="1530000" />
+      <workItem from="1674479088493" duration="972000" />
     </task>
     <servers />
   </component>
@@ -70,5 +152,23 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/twitter-stream-service/src/main/java/com/di/twitter/analytics/stream/service/listener/TwitterStatusListener.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TwitterEventAnalytics$TwitterExtractionApplication.ic" NAME="TwitterExtractionApplication Coverage Results" MODIFIED="1673440106604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
