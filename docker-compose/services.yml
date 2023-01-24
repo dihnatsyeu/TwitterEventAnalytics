@@ -1,0 +1,34 @@
+version: '3.7'
+services:
+  twitter-stream-service:
+    image: ${GROUP_ID}/twitter.stream.sercice:${SERVICE_VERSION:-latest}
+    ports:
+      - "5010:5010"
+    volumes:
+      - "./docker-logs:/workspace/twitter-stream-service/logs"
+    user: root
+    entrypoint: ["check-config-server-started.sh"]
+
+    environment:
+      - "JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*5010 -Xms128m -Xmx256m"
+      - "LOGGING_LEVEL_DI_TWITTER_ANALYTICS=info"
+      - "LOGGING_LEVEL_ROOT=info"
+      - "KAFKA-CONFIG_TOPIC-NAME=twitter-topic"
+      - "KAFKA-CONFIG_BOOTSTRAP-SERVERS=kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092"
+      - "KAFKA-CONFIG_SCHEMA-REGISTRY-URL=http://schema-registry:8081"
+      - "SPRING_CLOUD_CONFIG_URI=http://config-server:8888"
+    networks:
+      - ${GLOBAL_NETWORK:-services}
+
+  config-server:
+    image: ${GROUP_ID}/config.server:${SERVICE_VERSION:-latest}
+    ports:
+      - "5011:5011"
+    volumes:
+      - "./docker-logs:/workspace/config-server/logs"
+    environment:
+      - "JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5011 -Xms128m -Xmx256m"
+      - "ENCRYPT_KEY=${ENCRYPT_KEY}"
+    networks:
+      - ${GLOBAL_NETWORK:-services}
+

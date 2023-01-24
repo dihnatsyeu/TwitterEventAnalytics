@@ -5,11 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e339b457-8460-4348-8cc7-27bf9d5db719" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app-config/src/main/java/com/di/twitter/analytics/app/config/KafkaConsumerConfigData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app-config/src/main/resources/logback-common.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server-repository/config-client-stream_reader.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/java/com/di/twitter/analytics/config/server/ConfigServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/java/com/di/twitter/analytics/config/server/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/check-config-server-started.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/services.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-storage/kafka-consumer/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-storage/kafka-consumer/src/main/java/com/by/twitter/analytics/consumer/config/KafkaConsumerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-read-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-read-service/src/main/java/com/di/twitter/analytics/stream/read/service/StreamReadServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-read-service/src/main/java/com/di/twitter/analytics/stream/read/service/consumer/KafkaConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-read-service/src/main/java/com/di/twitter/analytics/stream/read/service/consumer/impl/TwitterKafkaConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-read-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-read-service/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/twitter-stream-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-storage/kafka-producer/src/main/java/com/di/twitter/analytics/producer/config/service/impl/TwitterKafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-storage/kafka-producer/src/main/java/com/di/twitter/analytics/producer/config/service/impl/TwitterKafkaProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server-repository/config-client-twitter_stream.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server-repository/config-client-twitter_stream.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/.env" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-storage/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/event-storage/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/twitter-stream-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/twitter-stream-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter-stream-service/src/main/java/com/di/twitter/analytics/stream/service/listener/TwitterStatusListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/twitter-stream-service/src/main/java/com/di/twitter/analytics/stream/service/listener/TwitterStatusListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter-stream-service/src/main/java/com/di/twitter/analytics/stream/service/transformer/TwitterStatusToAvroTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/twitter-stream-service/src/main/java/com/di/twitter/analytics/stream/service/transformer/TwitterStatusToAvroTransformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twitter-stream-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/twitter-stream-service/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/twitter-stream-service/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twitter-stream-service/src/test/java/com/di/twitter/analytics/stream/service/TwitterExtractorServiceTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +83,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "corretto-11",
-    "last_opened_file_path": "/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/twitter-extractor/src/main/resources",
+    "last_opened_file_path": "/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/docker-compose",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -66,15 +92,17 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "4a8bb7c103214bb0997a09e90c920bd1"
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "spring.configuration.checksum": "b527428a5ed66b7e5a83b9d7da9ad7f2"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docker-compose" />
       <recent name="$PROJECT_DIR$/twitter-extractor/src/main/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/event-storage" />
       <recent name="$PROJECT_DIR$/event-stream/kafka-model/src/main/avro" />
       <recent name="$PROJECT_DIR$/app-config/src/main/resources" />
       <recent name="$PROJECT_DIR$/app-config/src/main" />
@@ -82,16 +110,23 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.TwitterExtractionApplication">
-    <configuration name="TwitterExtractionApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="twitter-stream-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.twitter.extractor.TwitterExtractionApplication" />
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" />
+      <module name="config-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.di.twitter.analytics.config.server.ConfigServerApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.di.twitter.analytics.config.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TwitterExtractionApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="twitter-stream-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.di.twitter.analytics.stream.service.TwitterExtractionApplication" />
+    <configuration name="StreamReadServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="stream-read-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.di.twitter.analytics.stream.read.service.StreamReadServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -112,10 +147,15 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Spring Boot.StreamReadServiceApplication" />
       <item itemvalue="Spring Boot.TwitterExtractionApplication" />
-      <item itemvalue="Spring Boot.TwitterExtractionApplication (1)" />
-      <item itemvalue="Spring Boot.TwitterExtractionApplication (2)" />
+      <item itemvalue="Spring Boot.ConfigServerApplication" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ConfigServerApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SpringBeansView">
@@ -135,7 +175,11 @@
       <workItem from="1673543244992" duration="6941000" />
       <workItem from="1673869761827" duration="8055000" />
       <workItem from="1674128251530" duration="1530000" />
-      <workItem from="1674479088493" duration="972000" />
+      <workItem from="1674479088493" duration="1333000" />
+      <workItem from="1674480431585" duration="6764000" />
+      <workItem from="1674493997832" duration="4010000" />
+      <workItem from="1674558936096" duration="7209000" />
+      <workItem from="1674576457706" duration="2196000" />
     </task>
     <servers />
   </component>
