@@ -5,42 +5,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e339b457-8460-4348-8cc7-27bf9d5db719" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app-config/src/main/java/com/di/twitter/analytics/app/config/KafkaConsumerConfigData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-config/src/main/resources/logback-common.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server-repository/config-client-stream_reader.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/java/com/di/twitter/analytics/config/server/ConfigServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/java/com/di/twitter/analytics/config/server/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose/check-config-server-started.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose/services.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event-storage/kafka-consumer/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event-storage/kafka-consumer/src/main/java/com/by/twitter/analytics/consumer/config/KafkaConsumerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-read-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-read-service/src/main/java/com/di/twitter/analytics/stream/read/service/StreamReadServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-read-service/src/main/java/com/di/twitter/analytics/stream/read/service/consumer/KafkaConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-read-service/src/main/java/com/di/twitter/analytics/stream/read/service/consumer/impl/TwitterKafkaConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-read-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-read-service/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/twitter-stream-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app-config/src/main/java/com/di/twitter/analytics/app/config/ElasticConfigData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/elastic_cluster.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-engine/elastic-config/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-engine/elastic-config/src/main/java/com/di/twitter/analytics/elastic/config/ElasticsearchConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-engine/elastic-index-client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-engine/elastic-index-client/src/main/java/com/di/twitter/analytics/elastic/index/client/repository/TwitterElasticsearchIndexRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-engine/elastic-index-client/src/main/java/com/di/twitter/analytics/elastic/index/client/service/ElasticIndexClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-engine/elastic-index-client/src/main/java/com/di/twitter/analytics/elastic/index/client/service/impl/TwitterElasticIndexClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-engine/elastic-index-client/src/main/java/com/di/twitter/analytics/elastic/index/client/service/impl/TwitterElasticRepositoryIndexClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-engine/elastic-index-client/src/main/java/com/di/twitter/analytics/elastic/index/client/util/ElasticIndexUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-engine/elastic-model/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-engine/elastic-model/src/main/java/com/di/twitter/analytics/elastic/model/index/IndexModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-engine/elastic-model/src/main/java/com/di/twitter/analytics/elastic/model/index/impl/TwitterIndexModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-engine/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-engine/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-engine/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-read-service/src/main/java/com/di/twitter/analytics/stream/read/service/transformer/AvroToElasticModelTransformer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server-repository/config-client-twitter_stream.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server-repository/config-client-twitter_stream.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server-repository/config-client-stream_reader.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server-repository/config-client-stream_reader.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose/.env" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-storage/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/event-storage/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/services.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter-stream-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/twitter-stream-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter-stream-service/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter-stream-service/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/twitter-stream-service/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter-stream-service/src/test/java/com/di/twitter/analytics/stream/service/TwitterExtractorServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-read-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stream-read-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-read-service/src/main/java/com/di/twitter/analytics/stream/read/service/consumer/impl/TwitterKafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/stream-read-service/src/main/java/com/di/twitter/analytics/stream/read/service/consumer/impl/TwitterKafkaConsumer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/search-engine">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/search-engine">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="search-engine" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="search-engine" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -72,30 +97,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "corretto-11",
-    "last_opened_file_path": "/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/docker-compose",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "spring.configuration.checksum": "b527428a5ed66b7e5a83b9d7da9ad7f2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/docker-compose&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;51e2f759ec7cac181fb0533cd16c3461&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/docker-compose" />
@@ -179,7 +204,10 @@
       <workItem from="1674480431585" duration="6764000" />
       <workItem from="1674493997832" duration="4010000" />
       <workItem from="1674558936096" duration="7209000" />
-      <workItem from="1674576457706" duration="2196000" />
+      <workItem from="1674576457706" duration="5011000" />
+      <workItem from="1674673263418" duration="6777000" />
+      <workItem from="1674741429445" duration="241000" />
+      <workItem from="1674741678130" duration="602000" />
     </task>
     <servers />
   </component>
