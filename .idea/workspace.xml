@@ -5,39 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e339b457-8460-4348-8cc7-27bf9d5db719" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app-config/src/main/java/com/di/twitter/analytics/app/config/ElasticQueryConfigData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-config/src/main/java/com/di/twitter/analytics/app/config/QueryServiceConfigData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-config/src/main/java/com/di/twitter/analytics/common/util/CollectionsUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server-repository/config-client-data_query_service.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose/check-kafka-topics-created.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/query-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/QueryServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/api/DocumentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/config/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/error/handler/QueryServiceErrorHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/model/QueryServiceRequestModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/model/QueryServiceResponseModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/model/assembler/ElasticQueryServiceResponseModelAssembler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/service/ElasticQueryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/service/impl/TwitterElasticQueryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/transformer/ElasticToResponseModelTransformer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/query-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/query-service/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search-engine/elastic-query-client/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search-engine/elastic-query-client/src/main/java/com/di/twitter/analytics/elastic/query/client/exception/SearchEngineQueryException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search-engine/elastic-query-client/src/main/java/com/di/twitter/analytics/elastic/query/client/repository/TwitterElasticsearchQueryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search-engine/elastic-query-client/src/main/java/com/di/twitter/analytics/elastic/query/client/service/ElasticQueryClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search-engine/elastic-query-client/src/main/java/com/di/twitter/analytics/elastic/query/client/service/impl/TwitterElasticQueryClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search-engine/elastic-query-client/src/main/java/com/di/twitter/analytics/elastic/query/client/service/impl/TwitterElasticRepositoryQueryClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search-engine/elastic-query-client/src/main/java/com/di/twitter/analytics/elastic/query/client/util/ElasticQueryUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/services.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-storage/kafka-consumer/src/main/java/com/by/twitter/analytics/consumer/config/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-storage/kafka-consumer/src/main/java/com/by/twitter/analytics/consumer/config/KafkaConsumerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search-engine/elastic-config/src/main/java/com/di/twitter/analytics/elastic/config/ElasticsearchConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/search-engine/elastic-config/src/main/java/com/di/twitter/analytics/elastic/config/ElasticsearchConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search-engine/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/search-engine/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream-read-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stream-read-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/query-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/query-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/api/DocumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/api/DocumentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/config/WebSecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +196,7 @@
       <workItem from="1675085716414" duration="1428000" />
       <workItem from="1675088033701" duration="599000" />
       <workItem from="1675190688586" duration="1397000" />
-      <workItem from="1675253446031" duration="4407000" />
+      <workItem from="1675253446031" duration="6229000" />
     </task>
     <servers />
   </component>
