@@ -5,32 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e339b457-8460-4348-8cc7-27bf9d5db719" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app-config/src/main/java/com/di/twitter/analytics/app/config/ElasticConfigData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose/elastic_cluster.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search-engine/elastic-config/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search-engine/elastic-config/src/main/java/com/di/twitter/analytics/elastic/config/ElasticsearchConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search-engine/elastic-index-client/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search-engine/elastic-index-client/src/main/java/com/di/twitter/analytics/elastic/index/client/repository/TwitterElasticsearchIndexRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search-engine/elastic-index-client/src/main/java/com/di/twitter/analytics/elastic/index/client/service/ElasticIndexClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search-engine/elastic-index-client/src/main/java/com/di/twitter/analytics/elastic/index/client/service/impl/TwitterElasticIndexClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search-engine/elastic-index-client/src/main/java/com/di/twitter/analytics/elastic/index/client/service/impl/TwitterElasticRepositoryIndexClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search-engine/elastic-index-client/src/main/java/com/di/twitter/analytics/elastic/index/client/util/ElasticIndexUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search-engine/elastic-model/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search-engine/elastic-model/src/main/java/com/di/twitter/analytics/elastic/model/index/IndexModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search-engine/elastic-model/src/main/java/com/di/twitter/analytics/elastic/model/index/impl/TwitterIndexModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search-engine/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search-engine/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search-engine/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-read-service/src/main/java/com/di/twitter/analytics/stream/read/service/transformer/AvroToElasticModelTransformer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app-config/src/main/java/com/di/twitter/analytics/app/config/ElasticQueryConfigData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app-config/src/main/java/com/di/twitter/analytics/app/config/QueryServiceConfigData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-config/src/main/java/com/di/twitter/analytics/common/util/CollectionsUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server-repository/config-client-data_query_service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/check-kafka-topics-created.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/QueryServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/api/DocumentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/error/handler/QueryServiceErrorHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/model/QueryServiceRequestModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/model/QueryServiceResponseModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/model/assembler/ElasticQueryServiceResponseModelAssembler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/service/ElasticQueryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/service/impl/TwitterElasticQueryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/transformer/ElasticToResponseModelTransformer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-service/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-engine/elastic-query-client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-engine/elastic-query-client/src/main/java/com/di/twitter/analytics/elastic/query/client/exception/SearchEngineQueryException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-engine/elastic-query-client/src/main/java/com/di/twitter/analytics/elastic/query/client/repository/TwitterElasticsearchQueryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-engine/elastic-query-client/src/main/java/com/di/twitter/analytics/elastic/query/client/service/ElasticQueryClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-engine/elastic-query-client/src/main/java/com/di/twitter/analytics/elastic/query/client/service/impl/TwitterElasticQueryClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-engine/elastic-query-client/src/main/java/com/di/twitter/analytics/elastic/query/client/service/impl/TwitterElasticRepositoryQueryClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-engine/elastic-query-client/src/main/java/com/di/twitter/analytics/elastic/query/client/util/ElasticQueryUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server-repository/config-client-stream_reader.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server-repository/config-client-stream_reader.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose/.env" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/services.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-storage/kafka-consumer/src/main/java/com/by/twitter/analytics/consumer/config/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-storage/kafka-consumer/src/main/java/com/by/twitter/analytics/consumer/config/KafkaConsumerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search-engine/elastic-config/src/main/java/com/di/twitter/analytics/elastic/config/ElasticsearchConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/search-engine/elastic-config/src/main/java/com/di/twitter/analytics/elastic/config/ElasticsearchConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search-engine/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/search-engine/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stream-read-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stream-read-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream-read-service/src/main/java/com/di/twitter/analytics/stream/read/service/consumer/impl/TwitterKafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/stream-read-service/src/main/java/com/di/twitter/analytics/stream/read/service/consumer/impl/TwitterKafkaConsumer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +115,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/docker-compose&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/query-service/src/main/resources&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -118,11 +125,12 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;51e2f759ec7cac181fb0533cd16c3461&quot;
+    &quot;spring.configuration.checksum&quot;: &quot;81a011fd685a6300e86fc2ad8f099cc8&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/query-service/src/main/resources" />
       <recent name="$PROJECT_DIR$/docker-compose" />
       <recent name="$PROJECT_DIR$/twitter-extractor/src/main/resources" />
     </key>
@@ -134,7 +142,7 @@
       <recent name="$PROJECT_DIR$/app-config" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.TwitterExtractionApplication">
+  <component name="RunManager" selected="Spring Boot.ConfigServerApplication">
     <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="ACTIVE_PROFILES" />
       <module name="config-server" />
@@ -207,7 +215,15 @@
       <workItem from="1674576457706" duration="5011000" />
       <workItem from="1674673263418" duration="6777000" />
       <workItem from="1674741429445" duration="241000" />
-      <workItem from="1674741678130" duration="602000" />
+      <workItem from="1674741678130" duration="2271000" />
+      <workItem from="1674823727308" duration="5018000" />
+      <workItem from="1674916048497" duration="86000" />
+      <workItem from="1674921868274" duration="1185000" />
+      <workItem from="1674923143763" duration="5476000" />
+      <workItem from="1675085716414" duration="1428000" />
+      <workItem from="1675088033701" duration="599000" />
+      <workItem from="1675190688586" duration="1397000" />
+      <workItem from="1675253446031" duration="4407000" />
     </task>
     <servers />
   </component>

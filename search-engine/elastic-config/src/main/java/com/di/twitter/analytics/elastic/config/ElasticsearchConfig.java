@@ -17,7 +17,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 @RequiredArgsConstructor
 @Configuration
-@EnableElasticsearchRepositories(basePackages = "com.di.twitter.analytics.index.client.repository")
+@EnableElasticsearchRepositories(basePackages = "com.di.twitter.analytics.elastic")
 public class ElasticsearchConfig extends AbstractElasticsearchConfiguration {
 
     private final ElasticConfigData configData;

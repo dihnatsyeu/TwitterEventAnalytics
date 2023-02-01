@@ -5,7 +5,6 @@ import com.di.twitter.analytics.app.config.KafkaConsumerConfigData;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
-import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.apache.avro.specific.SpecificRecordBase;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
