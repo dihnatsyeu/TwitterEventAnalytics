@@ -20,6 +20,7 @@
         <module>search-engine/elastic-model</module>
         <module>search-engine/elastic-query-client</module>
         <module>query-service</module>
+        <module>query-web-client</module>
     </modules>
     <parent>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -48,6 +49,7 @@
         <kafka.serializer.version>5.5.1</kafka.serializer.version>
         <jna.version>5.7.0</jna.version>
         <clould.config.server>2.2.6.RELEASE</clould.config.server>
+        <spring-cloud.version>2.2.6.RELEASE</spring-cloud.version>
         <spring-clould.dependencies.version>Hoxton.SR9</spring-clould.dependencies.version>
         <spring.cloud.cli.version>2.2.3.RELEASE</spring.cloud.cli.version>
         <elasticsearch.version>7.9.1</elasticsearch.version>
@@ -79,6 +81,13 @@
                 <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
                 <version>${spring-boot.version}</version>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-thymeleaf</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
             <!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui -->
             <dependency>
                 <groupId>org.springdoc</groupId>
@@ -102,6 +111,11 @@
                 <version>${spring-clould.dependencies.version}</version>
                 <type>BOM</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-loadbalancer</artifactId>
+                <version>${spring-cloud.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>

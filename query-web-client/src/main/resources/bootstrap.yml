@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: query-web-client
+  profiles:
+    active: query_client
+  cloud:
+    config:
+      name: query-web-client,config-client
+      uri: http://localhost:8888
+      username: spring_cloud_user
+      password: springCloud_Pwd1!

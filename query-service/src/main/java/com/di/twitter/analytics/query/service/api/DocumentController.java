@@ -11,6 +11,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,10 +23,13 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 @RequiredArgsConstructor
-@RequestMapping(value = "/document")
+@RequestMapping(value = "/documents")
 public class DocumentController {
 
     private final ElasticQueryService queryService;
+
+    @Value("${server.port}")
+    private String port;
 
     @Operation(summary = "Get all documents")
     @ApiResponses(value = {
@@ -64,7 +68,8 @@ public class DocumentController {
     ResponseEntity<List<QueryServiceResponseModel>> getDocumentsByText(@Valid
             @RequestBody QueryServiceRequestModel requestModel) {
         List<QueryServiceResponseModel> modelList = queryService.getDocumentsByText(requestModel.getText());
-        log.info("Found {} records when searching by text: {}", modelList.size(), requestModel.getText());
+        log.info("Found {} records when searching by text: {} on port {}", modelList.size(), requestModel.getText(),
+                port);
         return ResponseEntity.ok(modelList);
     }
 }

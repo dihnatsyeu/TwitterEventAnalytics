@@ -5,12 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e339b457-8460-4348-8cc7-27bf9d5db719" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app-config/src/main/java/com/di/twitter/analytics/app/config/QueryWebClientConfigData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app-config/src/main/java/com/di/twitter/analytics/app/config/UserConfigData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server-repository/config-client-query_client.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-web-client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-web-client/src/main/java/com/di/twitter/analytics/query/client/QueryWebClientApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-web-client/src/main/java/com/di/twitter/analytics/query/client/api/QueryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-web-client/src/main/java/com/di/twitter/analytics/query/client/config/QueryServiceInstanceListSupplierConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-web-client/src/main/java/com/di/twitter/analytics/query/client/config/WebClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-web-client/src/main/java/com/di/twitter/analytics/query/client/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-web-client/src/main/java/com/di/twitter/analytics/query/client/error/handler/WebClientErrorHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-web-client/src/main/java/com/di/twitter/analytics/query/client/exception/QueryWebClientException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-web-client/src/main/java/com/di/twitter/analytics/query/client/model/QueryWebClientRequestModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-web-client/src/main/java/com/di/twitter/analytics/query/client/model/QueryWebClientResponseModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-web-client/src/main/java/com/di/twitter/analytics/query/client/service/ElasticQueryWebClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-web-client/src/main/java/com/di/twitter/analytics/query/client/service/impl/TwitterElasticQueryWebClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-web-client/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-web-client/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-web-client/src/main/resources/templates/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-web-client/src/main/resources/templates/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-web-client/src/main/resources/templates/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-web-client/src/main/resources/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-web-client/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server-repository/config-client-data_query_service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server-repository/config-client-query_service.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/services.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/query-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/query-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/api/DocumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/api/DocumentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/query-service/src/main/java/com/di/twitter/analytics/query/service/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/query-service/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/query-service/src/main/resources/logback.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,17 +54,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="search-engine" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="search-engine" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -77,35 +91,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/query-service/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;81a011fd685a6300e86fc2ad8f099cc8&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "corretto-11",
+    "last_opened_file_path": "/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/query-web-client/src/main/java/com/di/twitter/analytics/query/client",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "6c893c207d6a4e50e7594ea943eff453"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/query-service/src/main/resources" />
-      <recent name="$PROJECT_DIR$/docker-compose" />
-      <recent name="$PROJECT_DIR$/twitter-extractor/src/main/resources" />
+      <recent name="$PROJECT_DIR$/query-web-client/src/main/java/com/di/twitter/analytics/query/client" />
+      <recent name="$PROJECT_DIR$/search-engine/elastic-query-client/src/main/java/com/di/twitter/analytics/elastic/query/client" />
+      <recent name="$PROJECT_DIR$/query-web-client/src/main/resources" />
+      <recent name="$PROJECT_DIR$/app-config/src/main/java/com/di/twitter/analytics/app/config" />
+      <recent name="$PROJECT_DIR$/config-server-repository" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/event-storage" />
@@ -126,6 +142,13 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QueryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="query-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.di.twitter.analytics.query.service.QueryServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -153,6 +176,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Spring Boot.QueryServiceApplication" />
       <item itemvalue="Spring Boot.StreamReadServiceApplication" />
       <item itemvalue="Spring Boot.TwitterExtractionApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
@@ -196,7 +220,14 @@
       <workItem from="1675085716414" duration="1428000" />
       <workItem from="1675088033701" duration="599000" />
       <workItem from="1675190688586" duration="1397000" />
-      <workItem from="1675253446031" duration="6229000" />
+      <workItem from="1675253446031" duration="7250000" />
+      <workItem from="1675356161773" duration="38000" />
+      <workItem from="1675426411041" duration="2228000" />
+      <workItem from="1675675519285" duration="4279000" />
+      <workItem from="1675681600581" duration="1579000" />
+      <workItem from="1675883612655" duration="679000" />
+      <workItem from="1675965942702" duration="1310000" />
+      <workItem from="1676461005009" duration="5237000" />
     </task>
     <servers />
   </component>
