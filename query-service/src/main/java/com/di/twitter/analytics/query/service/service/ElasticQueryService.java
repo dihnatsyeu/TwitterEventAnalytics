@@ -1,6 +1,7 @@
 package com.di.twitter.analytics.query.service.service;
 
-import com.di.twitter.analytics.query.service.model.QueryServiceResponseModel;
+
+import com.di.twitter.analytics.query.common.model.QueryServiceResponseModel;
 import java.util.List;
 
 public interface ElasticQueryService {

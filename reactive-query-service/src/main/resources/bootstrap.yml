@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: reactive-query-service
+  profiles:
+    active: reactive_query_service
+  cloud:
+    config:
+      name: reactive-query-service,config-client
+      uri: http://localhost:8888
+      username: spring_cloud_user
+      password: springCloud_Pwd1!

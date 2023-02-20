@@ -1,7 +1,8 @@
 package com.di.twitter.analytics.query.service.api;
 
-import com.di.twitter.analytics.query.service.model.QueryServiceRequestModel;
-import com.di.twitter.analytics.query.service.model.QueryServiceResponseModel;
+
+import com.di.twitter.analytics.query.common.model.QueryServiceRequestModel;
+import com.di.twitter.analytics.query.common.model.QueryServiceResponseModel;
 import com.di.twitter.analytics.query.service.service.ElasticQueryService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;

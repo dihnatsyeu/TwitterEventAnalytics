@@ -1,6 +1,7 @@
 package com.di.twitter.analytics.producer.config.service.impl;
 
 
+import com.di.twitter.analytics.avro.model.TwitterAvroModel;
 import com.di.twitter.analytics.producer.config.service.KafkaProducer;
 import javax.annotation.PreDestroy;
 import lombok.RequiredArgsConstructor;
@@ -15,14 +16,14 @@ import org.springframework.util.concurrent.ListenableFutureCallback;
 @Service
 @Slf4j
 @RequiredArgsConstructor
-public class TwitterKafkaProducer implements KafkaProducer<Long, com.di.twitter.analytics.avro.model.TwitterAvroModel> {
+public class TwitterKafkaProducer implements KafkaProducer<Long, TwitterAvroModel> {
 
-    private final KafkaTemplate<Long, com.di.twitter.analytics.avro.model.TwitterAvroModel> kafkaTemplate;
+    private final KafkaTemplate<Long, TwitterAvroModel> kafkaTemplate;
 
     @Override
-    public void send(String topicName, Long key, com.di.twitter.analytics.avro.model.TwitterAvroModel message) {
+    public void send(String topicName, Long key, TwitterAvroModel message) {
         log.info("Sending message='{}' to topic='{}'", message, topicName);
-        ListenableFuture<SendResult<Long, com.di.twitter.analytics.avro.model.TwitterAvroModel>> result = kafkaTemplate.send(topicName, key, message);
+        ListenableFuture<SendResult<Long, TwitterAvroModel>> result = kafkaTemplate.send(topicName, key, message);
         result.addCallback(getCallback());
 
     }

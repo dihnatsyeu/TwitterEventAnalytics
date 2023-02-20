@@ -4,9 +4,11 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 import com.di.twitter.analytics.elastic.model.index.impl.TwitterIndexModel;
+
+import com.di.twitter.analytics.query.common.model.QueryServiceResponseModel;
+import com.di.twitter.analytics.query.common.transformer.ElasticToResponseModelTransformer;
 import com.di.twitter.analytics.query.service.api.DocumentController;
-import com.di.twitter.analytics.query.service.model.QueryServiceResponseModel;
-import com.di.twitter.analytics.query.service.transformer.ElasticToResponseModelTransformer;
+
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.hateoas.server.mvc.RepresentationModelAssemblerSupport;

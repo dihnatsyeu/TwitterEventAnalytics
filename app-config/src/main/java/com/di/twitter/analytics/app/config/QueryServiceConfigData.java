@@ -9,4 +9,5 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix = "query-service")
 public class QueryServiceConfigData {
     private String version;
+    private Long backPressureDelayMs;
 }

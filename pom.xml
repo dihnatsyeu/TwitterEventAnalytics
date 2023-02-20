@@ -14,13 +14,15 @@
         <module>common-config</module>
         <module>config-server</module>
         <module>stream-read-service</module>
-        <module>search-engine/elastic-config</module>
+
         <module>search-engine</module>
-        <module>search-engine/elastic-index-client</module>
-        <module>search-engine/elastic-model</module>
-        <module>search-engine/elastic-query-client</module>
+
         <module>query-service</module>
         <module>query-web-client</module>
+        <module>query-service-common</module>
+        <module>query-web-client-common</module>
+        <module>reactive-query-service</module>
+        <module>reactive-query-web-client</module>
     </modules>
     <parent>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -30,7 +32,7 @@
     <groupId>com.di.twitter.analytics</groupId>
     <artifactId>TwitterEventAnalytics</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.release>11</maven.compiler.release>
@@ -179,32 +181,42 @@
             <dependency>
                 <groupId>com.di.twitter.analytics</groupId>
                 <artifactId>app-config</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.di.twitter.analytics</groupId>
+                <artifactId>query-service-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.di.twitter.analytics</groupId>
+                <artifactId>query-web-client-common</artifactId>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.di.twitter.analytics</groupId>
                 <artifactId>elastic-query-client</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.di.twitter.analytics</groupId>
                 <artifactId>kafka-admin</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.di.twitter.analytics</groupId>
                 <artifactId>kafka-model</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.di.twitter.analytics</groupId>
                 <artifactId>kafka-consumer</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.di.twitter.analytics</groupId>
                 <artifactId>common-config</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.di.twitter.analytics</groupId>

@@ -2,7 +2,7 @@ package com.di.twitter.analytics.query.service.service.impl;
 
 import com.di.twitter.analytics.elastic.model.index.impl.TwitterIndexModel;
 import com.di.twitter.analytics.elastic.query.client.service.ElasticQueryClient;
-import com.di.twitter.analytics.query.service.model.QueryServiceResponseModel;
+import com.di.twitter.analytics.query.common.model.QueryServiceResponseModel;
 import com.di.twitter.analytics.query.service.model.assembler.ElasticQueryServiceResponseModelAssembler;
 import com.di.twitter.analytics.query.service.service.ElasticQueryService;
 import java.util.List;

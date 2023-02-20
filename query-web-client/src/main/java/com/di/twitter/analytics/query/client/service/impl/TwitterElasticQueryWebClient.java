@@ -1,10 +1,11 @@
 package com.di.twitter.analytics.query.client.service.impl;
 
 import com.di.twitter.analytics.app.config.QueryWebClientConfigData;
-import com.di.twitter.analytics.query.client.exception.QueryWebClientException;
-import com.di.twitter.analytics.query.client.model.QueryWebClientRequestModel;
-import com.di.twitter.analytics.query.client.model.QueryWebClientResponseModel;
+
 import com.di.twitter.analytics.query.client.service.ElasticQueryWebClient;
+import com.di.twitter.analytics.web.client.common.exception.QueryWebClientException;
+import com.di.twitter.analytics.web.client.common.model.QueryWebClientRequestModel;
+import com.di.twitter.analytics.web.client.common.model.QueryWebClientResponseModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
