@@ -1,0 +1,56 @@
+2023-01-23 20:03:10 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.5.Final
+2023-01-23 20:03:10 [main] INFO  c.d.t.a.c.s.ConfigServerApplication - No active profile set, falling back to default profiles: default
+2023-01-23 20:03:10 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=29ca3be8-87db-37b2-8d26-150d3972fbc4
+2023-01-23 20:03:11 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-01-23 20:03:11 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-23 20:03:11 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-23 20:03:11 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2023-01-23 20:03:11 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-01-23 20:03:11 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 457 ms
+2023-01-23 20:03:11 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-23 20:03:12 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-01-23 20:03:12 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-01-23 20:03:12 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-23 20:03:12 [main] INFO  c.d.t.a.c.s.ConfigServerApplication - Started ConfigServerApplication in 2.59 seconds (JVM running for 3.021)
+2023-01-23 20:03:13 [RMI TCP Connection(3)-192.168.0.233] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-23 20:03:13 [RMI TCP Connection(3)-192.168.0.233] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-01-23 20:03:13 [RMI TCP Connection(3)-192.168.0.233] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2023-01-23 20:04:29 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-23 20:04:40 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.5.Final
+2023-01-23 20:04:40 [main] INFO  c.d.t.a.c.s.ConfigServerApplication - No active profile set, falling back to default profiles: default
+2023-01-23 20:04:40 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=29ca3be8-87db-37b2-8d26-150d3972fbc4
+2023-01-23 20:04:40 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-01-23 20:04:40 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-01-23 20:04:40 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-23 20:04:40 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2023-01-23 20:04:41 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-01-23 20:04:41 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 430 ms
+2023-01-23 20:04:41 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-23 20:04:43 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-01-23 20:04:43 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-01-23 20:04:43 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-01-23 20:04:43 [main] INFO  c.d.t.a.c.s.ConfigServerApplication - Started ConfigServerApplication in 2.832 seconds (JVM running for 3.421)
+2023-01-23 20:04:43 [RMI TCP Connection(2)-192.168.0.233] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-23 20:04:43 [RMI TCP Connection(2)-192.168.0.233] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-01-23 20:04:43 [RMI TCP Connection(2)-192.168.0.233] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2023-01-23 20:04:50 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: file:/var/folders/v9/2flyrmzs095fr2xn7vlqpw340000gn/T/config-repo-15919745294048378271/config-client.yml
+2023-01-23 20:06:00 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-23 20:06:01 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.5.Final
+2023-01-23 20:06:02 [main] INFO  c.d.t.a.c.s.ConfigServerApplication - No active profile set, falling back to default profiles: default
+2023-01-23 20:06:02 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=29ca3be8-87db-37b2-8d26-150d3972fbc4
+2023-01-23 20:06:02 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-01-23 20:06:02 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-01-23 20:06:02 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-23 20:06:02 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2023-01-23 20:06:02 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-01-23 20:06:02 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 451 ms
+2023-01-23 20:06:02 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-23 20:06:04 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-01-23 20:06:04 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-01-23 20:06:04 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-01-23 20:06:04 [main] INFO  c.d.t.a.c.s.ConfigServerApplication - Started ConfigServerApplication in 2.894 seconds (JVM running for 3.208)
+2023-01-23 20:06:04 [RMI TCP Connection(3)-192.168.0.233] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-23 20:06:04 [RMI TCP Connection(3)-192.168.0.233] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-01-23 20:06:04 [RMI TCP Connection(3)-192.168.0.233] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-01-23 20:06:12 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: file:/var/folders/v9/2flyrmzs095fr2xn7vlqpw340000gn/T/config-repo-1290212277666107090/config-client-twitter_stream.yml
+2023-01-23 20:06:12 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: file:/var/folders/v9/2flyrmzs095fr2xn7vlqpw340000gn/T/config-repo-1290212277666107090/config-client.yml

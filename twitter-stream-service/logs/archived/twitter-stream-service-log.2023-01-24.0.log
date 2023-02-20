@@ -1,0 +1,781 @@
+2023-01-24 12:17:26 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2023-01-24 12:17:27 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=twitter-stream-service,config-client, profiles=[twitter_stream], label=null, version=6513a95a0cf6f0579b01f5de5a1a8a9a837caa90, state=null
+2023-01-24 12:17:27 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/dihnatsyeu/TwitterEventsAnalyticsConfigServer.git/config-client-twitter_stream.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/dihnatsyeu/TwitterEventsAnalyticsConfigServer.git/config-client.yml'}]
+2023-01-24 12:17:27 [main] INFO  c.d.t.a.s.s.TwitterExtractionApplication - The following profiles are active: twitter_stream
+2023-01-24 12:17:27 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=a95c3c69-8889-3434-80a6-eb683c3133fe
+2023-01-24 12:17:27 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$3f96dcc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-24 12:17:27 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-01-24 12:17:27 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2023-01-24 12:17:27 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2023-01-24 12:17:27 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1674559047322
+2023-01-24 12:17:27 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port(s): 8080
+2023-01-24 12:17:27 [main] INFO  c.d.t.a.s.s.TwitterExtractionApplication - Started TwitterExtractionApplication in 1.722 seconds (JVM running for 2.05)
+2023-01-24 12:17:27 [main] INFO  c.d.t.a.s.s.TwitterExtractionApplication - Applications runs
+2023-01-24 12:17:27 [main] INFO  c.d.t.a.k.a.client.KafkaAdminClient - Creating 1 topic(s), attempt 0
+2023-01-24 12:17:27 [main] INFO  c.d.t.a.s.s.i.i.KafkaStreamInitializer - Topics with name twitter-topic is ready for operations!
+2023-01-24 12:17:32 [main] INFO  c.d.t.a.s.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @victoriabaths: @mcrjewishmuseum is looking for artists and creatives who tell Jewish stories in their work to support their spring seas… sending to kafka topic twitter-topic
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 847453590, "id": 1617844033644298240, "text": "RT @victoriabaths: @mcrjewishmuseum is looking for artists and creatives who tell Jewish stories in their work to support their spring seas\u2026", "createdAt": 1674559050000}' to topic='twitter-topic'
+2023-01-24 12:17:41 [main] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	batch.size = 1638400
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	buffer.memory = 33554432
+	client.dns.lookup = default
+	client.id = producer-1
+	compression.type = snappy
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.LongSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 60000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+
+2023-01-24 12:17:41 [main] INFO  i.c.k.s.KafkaAvroSerializerConfig - KafkaAvroSerializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://localhost:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2023-01-24 12:17:41 [main] WARN  o.a.k.c.producer.ProducerConfig - The configuration 'internal.auto.downgrade.txn.commit' was supplied but isn't a known config.
+2023-01-24 12:17:41 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2023-01-24 12:17:41 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2023-01-24 12:17:41 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1674559061160
+2023-01-24 12:17:41 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: drG6JK0HTYe254_ROMOqVg
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @Dior: The wait was worth it! Here's JISOO, our gorgeous global ambassador, in Paris for the #DiorCouture Spring-Summer 2023 show by Mar… sending to kafka topic twitter-topic
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1550858095131246593, "id": 1617844032415334400, "text": "RT @Dior: The wait was worth it! Here's JISOO, our gorgeous global ambassador, in Paris for the #DiorCouture Spring-Summer 2023 show by Mar\u2026", "createdAt": 1674559050000}' to topic='twitter-topic'
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @LBFlyawayhome: "Bare of leaves, winter trees show the structure of branch and stem. The life of many things may seem to pause; but this… sending to kafka topic twitter-topic
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1540083457656619009, "id": 1617844038459346944, "text": "RT @LBFlyawayhome: \"Bare of leaves, winter trees show the structure of branch and stem. The life of many things may seem to pause; but this\u2026", "createdAt": 1674559051000}' to topic='twitter-topic'
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text #虚拟货币 #撸毛 #推特账号  https://t.co/pAFuP7Powq
+Pass evening spring store.
+😅👋😆👌🤐 sending to kafka topic twitter-topic
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3516485179, "id": 1617844036622249985, "text": "#虚拟货币 #撸毛 #推特账号  https://t.co/pAFuP7Powq\nPass evening spring store.\n😅👋😆👌🤐", "createdAt": 1674559051000}' to topic='twitter-topic'
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text H8 #无锡 Nothing is more pleasant than to take a walk on a fine spring day. https://t.co/nxTKuViGCE sending to kafka topic twitter-topic
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 482538600, "id": 1617844042674638850, "text": "H8 #无锡 Nothing is more pleasant than to take a walk on a fine spring day. https://t.co/nxTKuViGCE", "createdAt": 1674559052000}' to topic='twitter-topic'
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／
+
+1/31(火)まで毎日開催✨
+えらべるPay1,000円分がその場で当たる❗️
+
+✅応募方法
+①@yamazakipan_cp をフォロー
+②この投稿を1/24 23:59までにRT… sending to kafka topic twitter-topic
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 167835757, "id": 1617844041286287365, "text": "RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／\n\n1/31(火)まで毎日開催✨\nえらべるPay1,000円分がその場で当たる❗️\n\n✅応募方法\n①@yamazakipan_cp をフォロー\n②この投稿を1/24 23:59までにRT\u2026", "createdAt": 1674559052000}' to topic='twitter-topic'
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @lizahasanova: [24.01.2023] #GDRAGON at Chanel Spring 2023 Ready-to-Wear fashion show in Paris 
+
+#GDRAGONxCHANELSS23 @IBGDRGN https://t.… sending to kafka topic twitter-topic
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 766313611258109952, "id": 1617844040879476736, "text": "RT @lizahasanova: [24.01.2023] #GDRAGON at Chanel Spring 2023 Ready-to-Wear fashion show in Paris \n\n#GDRAGONxCHANELSS23 @IBGDRGN https://t.\u2026", "createdAt": 1674559052000}' to topic='twitter-topic'
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／
+
+1/31(火)まで毎日開催✨
+えらべるPay1,000円分がその場で当たる❗️
+
+✅応募方法
+①@yamazakipan_cp をフォロー
+②この投稿を1/24 23:59までにRT… sending to kafka topic twitter-topic
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1499801288447447040, "id": 1617844047988817921, "text": "RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／\n\n1/31(火)まで毎日開催✨\nえらべるPay1,000円分がその場で当たる❗️\n\n✅応募方法\n①@yamazakipan_cp をフォロー\n②この投稿を1/24 23:59までにRT\u2026", "createdAt": 1674559053000}' to topic='twitter-topic'
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @lizahasanova: [24.01.2023] #GDRAGON at Spring-Summer 2023 Haute Couture show in Paris 
+
+cr. voguehongkong
+#GDRAGONxCHANELSS23 
+@IBGDRGN… sending to kafka topic twitter-topic
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1487922871, "id": 1617844047376453633, "text": "RT @lizahasanova: [24.01.2023] #GDRAGON at Spring-Summer 2023 Haute Couture show in Paris \n\ncr. voguehongkong\n#GDRAGONxCHANELSS23 \n@IBGDRGN\u2026", "createdAt": 1674559053000}' to topic='twitter-topic'
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @MagiqueHerbe: Livraison 
+ Télégram @Cali_deal 
+Snap @plan_beuh23 
+ 
+#Job #Java #Programming  #poupettekhenza #100DaysofCode #DEVCommuni… sending to kafka topic twitter-topic
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1581295622392619011, "id": 1617844048399851523, "text": "RT @MagiqueHerbe: Livraison \n Télégram @Cali_deal \nSnap @plan_beuh23 \n \n#Job #Java #Programming  #poupettekhenza #100DaysofCode #DEVCommuni\u2026", "createdAt": 1674559053000}' to topic='twitter-topic'
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／
+
+1/31(火)まで毎日開催✨
+えらべるPay1,000円分がその場で当たる❗️
+
+✅応募方法
+①@yamazakipan_cp をフォロー
+②この投稿を1/24 23:59までにRT… sending to kafka topic twitter-topic
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1343435531292614656, "id": 1617844047510478849, "text": "RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／\n\n1/31(火)まで毎日開催✨\nえらべるPay1,000円分がその場で当たる❗️\n\n✅応募方法\n①@yamazakipan_cp をフォロー\n②この投稿を1/24 23:59までにRT\u2026", "createdAt": 1674559053000}' to topic='twitter-topic'
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text meu deus eu não sei o que eu sou *chora em posição fetal* https://t.co/qiTyhh31Jx sending to kafka topic twitter-topic
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1314582478376579072, "id": 1617844044675305475, "text": "meu deus eu não sei o que eu sou *chora em posição fetal* https://t.co/qiTyhh31Jx", "createdAt": 1674559052000}' to topic='twitter-topic'
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／
+
+1/31(火)まで毎日開催✨
+えらべるPay1,000円分がその場で当たる❗️
+
+✅応募方法
+①@yamazakipan_cp をフォロー
+②この投稿を1/24 23:59までにRT… sending to kafka topic twitter-topic
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1221031351551291392, "id": 1617844049662345216, "text": "RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／\n\n1/31(火)まで毎日開催✨\nえらべるPay1,000円分がその場で当たる❗️\n\n✅応募方法\n①@yamazakipan_cp をフォロー\n②この投稿を1/24 23:59までにRT\u2026", "createdAt": 1674559054000}' to topic='twitter-topic'
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text @politicshome @Siobhan_Baillie Substance?
+
+or just saying something for appearances sake? sending to kafka topic twitter-topic
+2023-01-24 12:17:41 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 934158127, "id": 1617844049683021825, "text": "@politicshome @Siobhan_Baillie Substance?\n\nor just saying something for appearances sake?", "createdAt": 1674559054000}' to topic='twitter-topic'
+2023-01-24 12:17:41 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 75; Timestamp 1674559061767, at time 752260615726541
+2023-01-24 12:17:41 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 76; Timestamp 1674559061769, at time 752260616427000
+2023-01-24 12:17:41 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 77; Timestamp 1674559061772, at time 752260616510208
+2023-01-24 12:17:41 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 76; Timestamp 1674559061765, at time 752260616859916
+2023-01-24 12:17:41 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 77; Timestamp 1674559061770, at time 752260616931291
+2023-01-24 12:17:41 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 78; Timestamp 1674559061774, at time 752260616961166
+2023-01-24 12:17:41 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 79; Timestamp 1674559061775, at time 752260616986916
+2023-01-24 12:17:41 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 80; Timestamp 1674559061776, at time 752260617012750
+2023-01-24 12:17:41 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 86; Timestamp 1674559061206, at time 752260634764166
+2023-01-24 12:17:41 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 87; Timestamp 1674559061764, at time 752260634897041
+2023-01-24 12:17:41 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 88; Timestamp 1674559061771, at time 752260634929333
+2023-01-24 12:17:41 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 89; Timestamp 1674559061773, at time 752260634965750
+2023-01-24 12:17:41 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 90; Timestamp 1674559061774, at time 752260634997458
+2023-01-24 12:17:41 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 91; Timestamp 1674559061776, at time 752260635121000
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @lizahasanova: [24.01.2023] #GDRAGON at Spring-Summer 2023 Haute Couture show in Paris 
+
+cr. harpersbazaarsg 
+#GDRAGONxCHANELSS23 
+@IBGD… sending to kafka topic twitter-topic
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1154035070522425345, "id": 1617844053378502656, "text": "RT @lizahasanova: [24.01.2023] #GDRAGON at Spring-Summer 2023 Haute Couture show in Paris \n\ncr. harpersbazaarsg \n#GDRAGONxCHANELSS23 \n@IBGD\u2026", "createdAt": 1674559055000}' to topic='twitter-topic'
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @charts_k: .@BTS_twt now holds the Top 4 longest charting songs by an idol group in Melon Weekly Chart history!
+
+#1 Spring Day - 310 wee… sending to kafka topic twitter-topic
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1109228257558306816, "id": 1617844053667872768, "text": "RT @charts_k: .@BTS_twt now holds the Top 4 longest charting songs by an idol group in Melon Weekly Chart history!\n\n#1 Spring Day - 310 wee\u2026", "createdAt": 1674559055000}' to topic='twitter-topic'
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @OkroguLes: Barnyard Designs 'Welcome' Doormat Welcome Mat, Outdoor Mat, Large Front Door Mat Indoor Entrance Mat, Back Door Mat Outdoor… sending to kafka topic twitter-topic
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1003898407365300225, "id": 1617844056218013698, "text": "RT @OkroguLes: Barnyard Designs 'Welcome' Doormat Welcome Mat, Outdoor Mat, Large Front Door Mat Indoor Entrance Mat, Back Door Mat Outdoor\u2026", "createdAt": 1674559055000}' to topic='twitter-topic'
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @rinri_kim97: เพลงที่หนิงไคอยากทำคือเพลงที่ฟังแล้วรู้สึกทัชใจ แนวๆ 'Spring Day' หรือ 'Butterfly' ของรุ่นพี่ BTS ดนตรีก็จะใช้แบบวงดนตรี… sending to kafka topic twitter-topic
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1868038226, "id": 1617844055794405376, "text": "RT @rinri_kim97: เพลงที่หนิงไคอยากทำคือเพลงที่ฟังแล้วรู้สึกทัชใจ แนวๆ 'Spring Day' หรือ 'Butterfly' ของรุ่นพี่ BTS ดนตรีก็จะใช้แบบวงดนตรี\u2026", "createdAt": 1674559055000}' to topic='twitter-topic'
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @HoleOfSG: #花騎士8周年
+
+団長さんのソーラーPTはどんな感じ？
+
+#Tips #ソーラードライブ #花騎士 #フラワーナイトガール
+https://t.co/SLlV8pp8wt sending to kafka topic twitter-topic
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1485617768427040770, "id": 1617844059942572035, "text": "RT @HoleOfSG: #花騎士8周年\n\n団長さんのソーラーPTはどんな感じ？\n\n#Tips #ソーラードライブ #花騎士 #フラワーナイトガール\nhttps://t.co/SLlV8pp8wt", "createdAt": 1674559056000}' to topic='twitter-topic'
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @lizahasanova: [24.01.2023] #GDRAGON at Spring-Summer 2023 Haute Couture show in Paris 
+
+cr. giampietrobaudo
+#GDRAGONxCHANELSS23 
+@IBGDR… sending to kafka topic twitter-topic
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1487922871, "id": 1617844057375670275, "text": "RT @lizahasanova: [24.01.2023] #GDRAGON at Spring-Summer 2023 Haute Couture show in Paris \n\ncr. giampietrobaudo\n#GDRAGONxCHANELSS23 \n@IBGDR\u2026", "createdAt": 1674559056000}' to topic='twitter-topic'
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @wxyzybxz: 230124 16:53 中国电影报道 x Wang Yibo CUT
+
+“On the third day of Lunar Year, I wish everyone a happy new year. You must go to watch… sending to kafka topic twitter-topic
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 103529995, "id": 1617844057455333376, "text": "RT @wxyzybxz: 230124 16:53 中国电影报道 x Wang Yibo CUT\n\n\u201COn the third day of Lunar Year, I wish everyone a happy new year. You must go to watch\u2026", "createdAt": 1674559056000}' to topic='twitter-topic'
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @SPRiNGNEWS_TH: ต้อนรับศักราชใหม่แบบสุดปัง! "กลัฟ คณาวุฒิ" ตอกย้ำความฮอตในต่างแดน จัดงานแฟนมีตติ้งครั้งแรกกลางกรุงโซล ประเทศเกาหลีใต้ ด้… sending to kafka topic twitter-topic
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 55779305, "id": 1617844060974354432, "text": "RT @SPRiNGNEWS_TH: ต้อนรับศักราชใหม่แบบสุดปัง! \"กลัฟ คณาวุฒิ\" ตอกย้ำความฮอตในต่างแดน จัดงานแฟนมีตติ้งครั้งแรกกลางกรุงโซล ประเทศเกาหลีใต้ ด้\u2026", "createdAt": 1674559056000}' to topic='twitter-topic'
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text @NftSariyildiz GM Yavuz ☕️😃 sending to kafka topic twitter-topic
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1434513489423388675, "id": 1617844063960723465, "text": "@NftSariyildiz GM Yavuz ☕️😃", "createdAt": 1674559057000}' to topic='twitter-topic'
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／
+
+1/31(火)まで毎日開催✨
+えらべるPay1,000円分がその場で当たる❗️
+
+✅応募方法
+①@yamazakipan_cp をフォロー
+②この投稿を1/24 23:59までにRT… sending to kafka topic twitter-topic
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1595372391856689152, "id": 1617844061347643392, "text": "RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／\n\n1/31(火)まで毎日開催✨\nえらべるPay1,000円分がその場で当たる❗️\n\n✅応募方法\n①@yamazakipan_cp をフォロー\n②この投稿を1/24 23:59までにRT\u2026", "createdAt": 1674559056000}' to topic='twitter-topic'
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text @trhk_nnw89 いつもなにわ男子の交換でお世話になっております。
+池川くん2⇄織山尚大1(少年忍者)での交換は可能でしょうか？
+明日の詳細が全て出揃ってからのご回答でも大丈夫ですのでお手数おかけしますがご検討お願いいたします。 sending to kafka topic twitter-topic
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1217389836383870978, "id": 1617844061729345538, "text": "@trhk_nnw89 いつもなにわ男子の交換でお世話になっております。\n池川くん2⇄織山尚大1(少年忍者)での交換は可能でしょうか？\n明日の詳細が全て出揃ってからのご回答でも大丈夫ですのでお手数おかけしますがご検討お願いいたします。", "createdAt": 1674559057000}' to topic='twitter-topic'
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text @Amondosanta02 左右対称に書くの難しい💦うさぎになった〜♡ sending to kafka topic twitter-topic
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2929807716, "id": 1617844066389209090, "text": "@Amondosanta02 左右対称に書くの難しい💦うさぎになった〜♡", "createdAt": 1674559058000}' to topic='twitter-topic'
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text @myyouth_boy 分かります！Spring Breezeも本当に❕Wanna Oneは1日だけでしたが戻ってきてくれたので8LOOMももどってきてくれることを大人しく待っときます！！ sending to kafka topic twitter-topic
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1602301168910479360, "id": 1617844067945312256, "text": "@myyouth_boy 分かります！Spring Breezeも本当に❕Wanna Oneは1日だけでしたが戻ってきてくれたので8LOOMももどってきてくれることを大人しく待っときます！！", "createdAt": 1674559058000}' to topic='twitter-topic'
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text Bu yıl Bahar Bayramı sırasında Çin'deki bazı şehirler havai fişek yasağını kaldırdı. Şehrin her yerinde rengarenk patlayan havai fişekler müthiş bir görüntü oluşturmuş 😍😍
+
+ #China #Fireworks #ChineseNewYear2023 #Çin #RABBIT2023 https://t.co/OFiqI8vvVy sending to kafka topic twitter-topic
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1036293283243352065, "id": 1617844066435354625, "text": "Bu yıl Bahar Bayramı sırasında Çin'deki bazı şehirler havai fişek yasağını kaldırdı. Şehrin her yerinde rengarenk patlayan havai fişekler müthiş bir görüntü oluşturmuş 😍😍\n\n #China #Fireworks #ChineseNewYear2023 #Çin #RABBIT2023 https://t.co/OFiqI8vvVy", "createdAt": 1674559058000}' to topic='twitter-topic'
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @jskylerinc: Trying to remain housed through Spring while on disability leave. If you are able to donate anything, thank you in advance.… sending to kafka topic twitter-topic
+2023-01-24 12:17:45 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1194063602212200448, "id": 1617844067454550016, "text": "RT @jskylerinc: Trying to remain housed through Spring while on disability leave. If you are able to donate anything, thank you in advance.\u2026", "createdAt": 1674559058000}' to topic='twitter-topic'
+2023-01-24 12:17:45 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 78; Timestamp 1674559065279, at time 752264078851791
+2023-01-24 12:17:45 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 79; Timestamp 1674559065280, at time 752264078979833
+2023-01-24 12:17:45 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 81; Timestamp 1674559065277, at time 752264080103041
+2023-01-24 12:17:45 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 82; Timestamp 1674559065278, at time 752264080161250
+2023-01-24 12:17:45 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 83; Timestamp 1674559065303, at time 752264094031750
+2023-01-24 12:17:45 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 84; Timestamp 1674559065305, at time 752264094160958
+2023-01-24 12:17:45 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 80; Timestamp 1674559065300, at time 752264095934666
+2023-01-24 12:17:45 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 81; Timestamp 1674559065307, at time 752264108775708
+2023-01-24 12:17:45 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 82; Timestamp 1674559065311, at time 752264108906625
+2023-01-24 12:17:45 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 83; Timestamp 1674559065312, at time 752264108936833
+2023-01-24 12:17:45 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 92; Timestamp 1674559065275, at time 752264130671125
+2023-01-24 12:17:45 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 93; Timestamp 1674559065281, at time 752264130778416
+2023-01-24 12:17:45 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 94; Timestamp 1674559065282, at time 752264159989458
+2023-01-24 12:17:45 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 95; Timestamp 1674559065284, at time 752264160190375
+2023-01-24 12:17:45 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 96; Timestamp 1674559065304, at time 752264195655125
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @minoringo_staff: 【🍎歌手活動5周年🍎】
+
+#鈴木みのり
+本日1月24日で歌手活動5周年を迎えました✨
+
+明日にはいよいよ
+✳️3rdアルバム「fruitful spring」
+🧚‍♂️ニューシングル「ミュージカル」
+が発売になります🎧
+
+これからも応援… sending to kafka topic twitter-topic
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 848541316359241730, "id": 1617844071707594752, "text": "RT @minoringo_staff: 【🍎歌手活動5周年🍎】\n\n#鈴木みのり\n本日1月24日で歌手活動5周年を迎えました✨\n\n明日にはいよいよ\n✳️3rdアルバム「fruitful spring」\n🧚\u200D♂️ニューシングル「ミュージカル」\nが発売になります🎧\n\nこれからも応援\u2026", "createdAt": 1674559059000}' to topic='twitter-topic'
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @Dior: The wait was worth it! Here's JISOO, our gorgeous global ambassador, in Paris for the #DiorCouture Spring-Summer 2023 show by Mar… sending to kafka topic twitter-topic
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 964274892534362114, "id": 1617844074295480320, "text": "RT @Dior: The wait was worth it! Here's JISOO, our gorgeous global ambassador, in Paris for the #DiorCouture Spring-Summer 2023 show by Mar\u2026", "createdAt": 1674559060000}' to topic='twitter-topic'
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text @aesim_0 애심님이랑 친해지지 못한것이 아쉽지만..그래도 언젠간 좋은 인연으로 다시 뵈었으면 좋겠습니다!항상 행복하게 보내길 빌게요 sending to kafka topic twitter-topic
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1475538895748366337, "id": 1617844076287787008, "text": "@aesim_0 애심님이랑 친해지지 못한것이 아쉽지만..그래도 언젠간 좋은 인연으로 다시 뵈었으면 좋겠습니다!항상 행복하게 보내길 빌게요", "createdAt": 1674559060000}' to topic='twitter-topic'
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text 40/40 in LDN x https://t.co/2mNlULeguS sending to kafka topic twitter-topic
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 737662016014417921, "id": 1617844078997303296, "text": "40/40 in LDN x https://t.co/2mNlULeguS", "createdAt": 1674559061000}' to topic='twitter-topic'
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text 【目的別で学ぶプログラミング言語】
+
+機械への組み込み→C言語
+Webサイトの開発→Ruby、PHP
+スマホアプリの開発→Swift、Java sending to kafka topic twitter-topic
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1029614638067937280, "id": 1617844081912348674, "text": "【目的別で学ぶプログラミング言語】\n\n機械への組み込み→C言語\nWebサイトの開発→Ruby、PHP\nスマホアプリの開発→Swift、Java", "createdAt": 1674559061000}' to topic='twitter-topic'
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @tanniefairie: "do remember they can't cancel the spring." — namjoon sending to kafka topic twitter-topic
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1468584723056189449, "id": 1617844077936140293, "text": "RT @tanniefairie: \"do remember they can't cancel the spring.\" \u2014 namjoon", "createdAt": 1674559060000}' to topic='twitter-topic'
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @lizahasanova: [24.01.2023] #GDRAGON at Spring-Summer 2023 Haute Couture show in Paris 
+
+cr. giampietrobaudo
+#GDRAGONxCHANELSS23 
+@IBGDR… sending to kafka topic twitter-topic
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1183466880771731456, "id": 1617844084307292161, "text": "RT @lizahasanova: [24.01.2023] #GDRAGON at Spring-Summer 2023 Haute Couture show in Paris \n\ncr. giampietrobaudo\n#GDRAGONxCHANELSS23 \n@IBGDR\u2026", "createdAt": 1674559062000}' to topic='twitter-topic'
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @wmag: #Dior muses #JISOO and #AnyaTaylorJoy bring classic elegance to the house's haute couture spring 2023 show. https://t.co/PbnU4e2q… sending to kafka topic twitter-topic
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1273972730770018304, "id": 1617844081895292929, "text": "RT @wmag: #Dior muses #JISOO and #AnyaTaylorJoy bring classic elegance to the house's haute couture spring 2023 show. https://t.co/PbnU4e2q\u2026", "createdAt": 1674559061000}' to topic='twitter-topic'
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text @MAX15east いらっしゃいませ😍 sending to kafka topic twitter-topic
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1237278654591168512, "id": 1617844083606847496, "text": "@MAX15east いらっしゃいませ😍", "createdAt": 1674559062000}' to topic='twitter-topic'
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／
+
+1/31(火)まで毎日開催✨
+えらべるPay1,000円分がその場で当たる❗️
+
+✅応募方法
+①@yamazakipan_cp をフォロー
+②この投稿を1/24 23:59までにRT… sending to kafka topic twitter-topic
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1225547017188970504, "id": 1617844086823882753, "text": "RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／\n\n1/31(火)まで毎日開催✨\nえらべるPay1,000円分がその場で当たる❗️\n\n✅応募方法\n①@yamazakipan_cp をフォロー\n②この投稿を1/24 23:59までにRT\u2026", "createdAt": 1674559063000}' to topic='twitter-topic'
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @jisoo_trends: [TIKTOK] #JISOO going viral on TikTok after #DiorCouture Spring-Summer 2023 Show.
+
+📎 https://t.co/6egHKOKiHt
+📎 https://t.… sending to kafka topic twitter-topic
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1127409212143726592, "id": 1617844088749056001, "text": "RT @jisoo_trends: [TIKTOK] #JISOO going viral on TikTok after #DiorCouture Spring-Summer 2023 Show.\n\n📎 https://t.co/6egHKOKiHt\n📎 https://t.\u2026", "createdAt": 1674559063000}' to topic='twitter-topic'
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @MonoEntertain: องค์หญิงตัวน้อยคิมจีซูลุคนี้สวยมากกกกกกก!!🤍 สวยสมกับเป็น โกลบอลแอมบาสซาเดอร์ของ #Dior ร่วมชมแฟชั่นโชว์คอลเล็กชั่น Haute… sending to kafka topic twitter-topic
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 738396046670237697, "id": 1617844089990557697, "text": "RT @MonoEntertain: องค์หญิงตัวน้อยคิมจีซูลุคนี้สวยมากกกกกกก!!🤍 สวยสมกับเป็น โกลบอลแอมบาสซาเดอร์ของ #Dior ร่วมชมแฟชั่นโชว์คอลเล็กชั่น Haute\u2026", "createdAt": 1674559063000}' to topic='twitter-topic'
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text @NftSariyildiz Gm🖤 sending to kafka topic twitter-topic
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2404396343, "id": 1617844092096090114, "text": "@NftSariyildiz Gm🖤", "createdAt": 1674559064000}' to topic='twitter-topic'
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text My One Weird Trick™️ is to sleep little, eat badly, stop exercising, drink too much coffee during the day and too much alcohol at night. Doesn't help me improve my productivity at all but it does have the effect of leaving me in a shitty mood 24/7. Hope this helps! https://t.co/ScAMrbDjvm sending to kafka topic twitter-topic
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 390951353, "id": 1617844093853523970, "text": "My One Weird Trick™️ is to sleep little, eat badly, stop exercising, drink too much coffee during the day and too much alcohol at night. Doesn't help me improve my productivity at all but it does have the effect of leaving me in a shitty mood 24/7. Hope this helps! https://t.co/ScAMrbDjvm", "createdAt": 1674559064000}' to topic='twitter-topic'
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @spring_twjp: ⋱ 🐯【本日発売！】🎉 ⋰
+
+#SPRiNG3月号 カバーボーイは
+#TravisJapan の皆さん！🐅
+
+テーマは #トラジャと一緒にもぐもぐ 🤍両面フォトカードにもとびきりのもぐもぐカットが!?🫣✨
+
+誌面大特集は、こんな寒い日にも参考に… sending to kafka topic twitter-topic
+2023-01-24 12:17:51 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1523973634469273601, "id": 1617844097825533954, "text": "RT @spring_twjp: ⋱ 🐯【本日発売！】🎉 ⋰\n\n#SPRiNG3月号 カバーボーイは\n#TravisJapan の皆さん！🐅\n\nテーマは #トラジャと一緒にもぐもぐ 🤍両面フォトカードにもとびきりのもぐもぐカットが!?🫣✨\n\n誌面大特集は、こんな寒い日にも参考に\u2026", "createdAt": 1674559065000}' to topic='twitter-topic'
+2023-01-24 12:17:51 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 85; Timestamp 1674559071040, at time 752269788405833
+2023-01-24 12:17:51 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 86; Timestamp 1674559071040, at time 752269788563625
+2023-01-24 12:17:51 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 87; Timestamp 1674559071041, at time 752269788600375
+2023-01-24 12:17:51 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 88; Timestamp 1674559071042, at time 752269788623291
+2023-01-24 12:17:51 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 89; Timestamp 1674559071042, at time 752269788642916
+2023-01-24 12:17:51 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 90; Timestamp 1674559071042, at time 752269788663750
+2023-01-24 12:17:51 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 84; Timestamp 1674559071040, at time 752269802230416
+2023-01-24 12:17:51 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 85; Timestamp 1674559071041, at time 752269802373833
+2023-01-24 12:17:51 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 86; Timestamp 1674559071041, at time 752269802398708
+2023-01-24 12:17:51 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 87; Timestamp 1674559071043, at time 752269802419458
+2023-01-24 12:17:51 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 88; Timestamp 1674559071043, at time 752269802438625
+2023-01-24 12:17:51 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 97; Timestamp 1674559071039, at time 752269813272416
+2023-01-24 12:17:51 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 98; Timestamp 1674559071041, at time 752269813385833
+2023-01-24 12:17:51 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 99; Timestamp 1674559071043, at time 752269813414375
+2023-01-24 12:17:51 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 100; Timestamp 1674559071043, at time 752269813438875
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @kimgoeunphofc: [230124] Kim Goeun’s Grand Palais arrival for Chanel Spring-Summer 2023 Haute Couture show. 
+
+#KimGoeun #김고은 #CHANEL #샤넬… sending to kafka topic twitter-topic
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 867637394593398784, "id": 1617844098161078273, "text": "RT @kimgoeunphofc: [230124] Kim Goeun\u2019s Grand Palais arrival for Chanel Spring-Summer 2023 Haute Couture show. \n\n#KimGoeun #김고은 #CHANEL #샤넬\u2026", "createdAt": 1674559065000}' to topic='twitter-topic'
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text @ECOWARRIORSS 'green' = LIES.
+
+period. sending to kafka topic twitter-topic
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1549276229383213056, "id": 1617844095455723522, "text": "@ECOWARRIORSS 'green' = LIES.\n\nperiod.", "createdAt": 1674559065000}' to topic='twitter-topic'
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text So pretty ggone  #KIMGOEUNxCHANEL https://t.co/13SuWGhfkx sending to kafka topic twitter-topic
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1544696673364226048, "id": 1617844100090458113, "text": "So pretty ggone  #KIMGOEUNxCHANEL https://t.co/13SuWGhfkx", "createdAt": 1674559066000}' to topic='twitter-topic'
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @gypsysw: 🤣🤣🤣
+Winter storm warning here in OK Yesterday felt like spring . https://t.co/awYT4ZF8wT sending to kafka topic twitter-topic
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 44603352, "id": 1617844100430188550, "text": "RT @gypsysw: 🤣🤣🤣\nWinter storm warning here in OK Yesterday felt like spring . https://t.co/awYT4ZF8wT", "createdAt": 1674559066000}' to topic='twitter-topic'
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @MagiqueHerbe: Livraison 
+ Télégram @Cali_deal 
+Snap @plan_beuh23 
+ 
+#Job #Java #Programming  #poupettekhenza #100DaysofCode #DEVCommuni… sending to kafka topic twitter-topic
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1533105519447404544, "id": 1617844106822123521, "text": "RT @MagiqueHerbe: Livraison \n Télégram @Cali_deal \nSnap @plan_beuh23 \n \n#Job #Java #Programming  #poupettekhenza #100DaysofCode #DEVCommuni\u2026", "createdAt": 1674559067000}' to topic='twitter-topic'
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @YOLOFRED2: Today is the second day of the Chinese New https://t.co/coxgievoLS guys, happy Spring Festival!
+兔年大吉，恭贺新禧!
+#papalouie #papal… sending to kafka topic twitter-topic
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1472972598518730765, "id": 1617844103458492418, "text": "RT @YOLOFRED2: Today is the second day of the Chinese New https://t.co/coxgievoLS guys, happy Spring Festival!\n兔年大吉，恭贺新禧!\n#papalouie #papal\u2026", "createdAt": 1674559067000}' to topic='twitter-topic'
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／
+
+1/31(火)まで毎日開催✨
+えらべるPay1,000円分がその場で当たる❗️
+
+✅応募方法
+①@yamazakipan_cp をフォロー
+②この投稿を1/24 23:59までにRT… sending to kafka topic twitter-topic
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2301778014, "id": 1617844103676588032, "text": "RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／\n\n1/31(火)まで毎日開催✨\nえらべるPay1,000円分がその場で当たる❗️\n\n✅応募方法\n①@yamazakipan_cp をフォロー\n②この投稿を1/24 23:59までにRT\u2026", "createdAt": 1674559067000}' to topic='twitter-topic'
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text First day of the Spring 2023 semester starts today. Can't believe I've already been back to school a whole year. Time flies! sending to kafka topic twitter-topic
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 53501501, "id": 1617844107086553088, "text": "First day of the Spring 2023 semester starts today. Can't believe I've already been back to school a whole year. Time flies!", "createdAt": 1674559067000}' to topic='twitter-topic'
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／
+
+1/31(火)まで毎日開催✨
+えらべるPay1,000円分がその場で当たる❗️
+
+✅応募方法
+①@yamazakipan_cp をフォロー
+②この投稿を1/24 23:59までにRT… sending to kafka topic twitter-topic
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1539199587239735296, "id": 1617844110064488452, "text": "RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／\n\n1/31(火)まで毎日開催✨\nえらべるPay1,000円分がその場で当たる❗️\n\n✅応募方法\n①@yamazakipan_cp をフォロー\n②この投稿を1/24 23:59までにRT\u2026", "createdAt": 1674559068000}' to topic='twitter-topic'
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／
+
+1/31(火)まで毎日開催✨
+えらべるPay1,000円分がその場で当たる❗️
+
+✅応募方法
+①@yamazakipan_cp をフォロー
+②この投稿を1/24 23:59までにRT… sending to kafka topic twitter-topic
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1355687077417865219, "id": 1617844110035152898, "text": "RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／\n\n1/31(火)まで毎日開催✨\nえらべるPay1,000円分がその場で当たる❗️\n\n✅応募方法\n①@yamazakipan_cp をフォロー\n②この投稿を1/24 23:59までにRT\u2026", "createdAt": 1674559068000}' to topic='twitter-topic'
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text @EuRhoads @WhiteHouse @POTUS The calendar used in the Chinese Spring Festival is a combination of the lunar calendar and the solar calendar, not the lunar calendar . sending to kafka topic twitter-topic
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1611743059401744384, "id": 1617844108982382592, "text": "@EuRhoads @WhiteHouse @POTUS The calendar used in the Chinese Spring Festival is a combination of the lunar calendar and the solar calendar, not the lunar calendar .", "createdAt": 1674559068000}' to topic='twitter-topic'
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text @SuperSquidoodle this would have been fine if they just made that fabled tutorial mode for java edition sending to kafka topic twitter-topic
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1173354860206546946, "id": 1617844112249749504, "text": "@SuperSquidoodle this would have been fine if they just made that fabled tutorial mode for java edition", "createdAt": 1674559069000}' to topic='twitter-topic'
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @cpjing8888: FRANCE FASHION CHANEL HAUTE COUTURE S/S 23 ARRIVALS
+
+Kim Go Eun arrives at a Chanel Haute Couture Spring-Summer 2023 collec… sending to kafka topic twitter-topic
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1540045574862675968, "id": 1617844118969024512, "text": "RT @cpjing8888: FRANCE FASHION CHANEL HAUTE COUTURE S/S 23 ARRIVALS\n\nKim Go Eun arrives at a Chanel Haute Couture Spring-Summer 2023 collec\u2026", "createdAt": 1674559070000}' to topic='twitter-topic'
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @LAVIDAPRADA: details at schiaparelli spring 2023 couture https://t.co/I1DrTYMA5w sending to kafka topic twitter-topic
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1223344906862845953, "id": 1617844118385995776, "text": "RT @LAVIDAPRADA: details at schiaparelli spring 2023 couture https://t.co/I1DrTYMA5w", "createdAt": 1674559070000}' to topic='twitter-topic'
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @Pass_spring: #KuzuArt https://t.co/iJAxTuGc78 sending to kafka topic twitter-topic
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1511165718607581185, "id": 1617844117509402625, "text": "RT @Pass_spring: #KuzuArt https://t.co/iJAxTuGc78", "createdAt": 1674559070000}' to topic='twitter-topic'
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @johnnys: Just before his spring stage play, the ever-busy Shigeaki Kato of #NEWS will first take part in the new TV drama "Manten no Go… sending to kafka topic twitter-topic
+2023-01-24 12:17:56 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1550466275733676032, "id": 1617844118746718208, "text": "RT @johnnys: Just before his spring stage play, the ever-busy Shigeaki Kato of #NEWS will first take part in the new TV drama \"Manten no Go\u2026", "createdAt": 1674559070000}' to topic='twitter-topic'
+2023-01-24 12:17:57 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 89; Timestamp 1674559076983, at time 752275746604583
+2023-01-24 12:17:57 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 90; Timestamp 1674559076984, at time 752275746721791
+2023-01-24 12:17:57 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 91; Timestamp 1674559076985, at time 752275746746041
+2023-01-24 12:17:57 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 92; Timestamp 1674559076985, at time 752275746766333
+2023-01-24 12:17:57 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 93; Timestamp 1674559076986, at time 752275746785000
+2023-01-24 12:17:57 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 101; Timestamp 1674559076983, at time 752275760504250
+2023-01-24 12:17:57 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 102; Timestamp 1674559076983, at time 752275760735125
+2023-01-24 12:17:57 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 103; Timestamp 1674559076984, at time 752275760759750
+2023-01-24 12:17:57 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 104; Timestamp 1674559076985, at time 752275760778791
+2023-01-24 12:17:57 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 105; Timestamp 1674559076985, at time 752275760796333
+2023-01-24 12:17:57 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 106; Timestamp 1674559076986, at time 752275760813583
+2023-01-24 12:17:57 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 91; Timestamp 1674559076983, at time 752275761530291
+2023-01-24 12:17:57 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 92; Timestamp 1674559076984, at time 752275761633833
+2023-01-24 12:17:57 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 93; Timestamp 1674559076984, at time 752275761664291
+2023-01-24 12:17:57 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 94; Timestamp 1674559076986, at time 752275761683416
+2023-01-24 12:17:57 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 95; Timestamp 1674559076986, at time 752275761703875
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text Spring Paradise スプパラ
+クリアステッカー 交換して下さる方を探しております
+
+【求】 三村航輝
+
+【譲】画像参照
+
+1セットのみ購入予定
+郵送でのお取引のみ
+比率違い優先
+個人がある場合のみの仮約束
+#スプパラ交換  #クリアステッカー交換 https://t.co/AuTdtPiYRG sending to kafka topic twitter-topic
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1547449583030378496, "id": 1617844120399278090, "text": "Spring Paradise スプパラ\nクリアステッカー 交換して下さる方を探しております\n\n【求】 三村航輝\n\n【譲】画像参照\n\n1セットのみ購入予定\n郵送でのお取引のみ\n比率違い優先\n個人がある場合のみの仮約束\n#スプパラ交換  #クリアステッカー交換 https://t.co/AuTdtPiYRG", "createdAt": 1674559071000}' to topic='twitter-topic'
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／
+
+1/31(火)まで毎日開催✨
+えらべるPay1,000円分がその場で当たる❗️
+
+✅応募方法
+①@yamazakipan_cp をフォロー
+②この投稿を1/24 23:59までにRT… sending to kafka topic twitter-topic
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1261971641682194433, "id": 1617844122227994624, "text": "RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／\n\n1/31(火)まで毎日開催✨\nえらべるPay1,000円分がその場で当たる❗️\n\n✅応募方法\n①@yamazakipan_cp をフォロー\n②この投稿を1/24 23:59までにRT\u2026", "createdAt": 1674559071000}' to topic='twitter-topic'
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text 2023 Renault Espace Morphs Into An SUV, Will Debut This Spring | Carscoops #carscoops https://t.co/q3mQAJybV7 sending to kafka topic twitter-topic
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 16670983, "id": 1617844120994676738, "text": "2023 Renault Espace Morphs Into An SUV, Will Debut This Spring | Carscoops #carscoops https://t.co/q3mQAJybV7", "createdAt": 1674559071000}' to topic='twitter-topic'
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text @JackDAshby Speaking of parasites I suspect that the author may have had a brain worm. sending to kafka topic twitter-topic
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1009641100905099264, "id": 1617844123922485249, "text": "@JackDAshby Speaking of parasites I suspect that the author may have had a brain worm.", "createdAt": 1674559071000}' to topic='twitter-topic'
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text Curious where the Spring Cloud Stream is heading in the future? 🔮 https://t.co/qWc7kIcQBe sending to kafka topic twitter-topic
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 14234466, "id": 1617844121531715584, "text": "Curious where the Spring Cloud Stream is heading in the future? 🔮 https://t.co/qWc7kIcQBe", "createdAt": 1674559071000}' to topic='twitter-topic'
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text Spring Paradise スプパラ フォトセ交換してくださる方を探してます。
+
+【求】池川侑希弥
+
+【譲】池川、佐藤新以外
+
+1/25購入する方優先
+1:1〜 郵送or又は会場手渡し
+お心あたりある方はDMにてご連絡お願い致します。
+
+#スプパラ交換 #フォトセ交換 sending to kafka topic twitter-topic
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1343452284651356160, "id": 1617844126128701440, "text": "Spring Paradise スプパラ フォトセ交換してくださる方を探してます。\n\n【求】池川侑希弥\n\n【譲】池川、佐藤新以外\n\n1/25購入する方優先\n1:1〜 郵送or又は会場手渡し\nお心あたりある方はDMにてご連絡お願い致します。\n\n#スプパラ交換 #フォトセ交換", "createdAt": 1674559072000}' to topic='twitter-topic'
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text I flourish in spring so let’s cut to it sending to kafka topic twitter-topic
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1459963671204012036, "id": 1617844127303098370, "text": "I flourish in spring so let\u2019s cut to it", "createdAt": 1674559072000}' to topic='twitter-topic'
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @lizahasanova: [24.01.2023] #GDRAGON at Spring-Summer 2023 Haute Couture show in Paris 
+
+cr. voguehongkong
+#GDRAGONxCHANELSS23 
+@IBGDRGN… sending to kafka topic twitter-topic
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1152291965871915008, "id": 1617844130641764353, "text": "RT @lizahasanova: [24.01.2023] #GDRAGON at Spring-Summer 2023 Haute Couture show in Paris \n\ncr. voguehongkong\n#GDRAGONxCHANELSS23 \n@IBGDRGN\u2026", "createdAt": 1674559073000}' to topic='twitter-topic'
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text @Gojo_Spring 토우지가 날 유혹해🤦🏻‍♀️ sending to kafka topic twitter-topic
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1499575497474605059, "id": 1617844128196481024, "text": "@Gojo_Spring 토우지가 날 유혹해🤦🏻\u200D♀️", "createdAt": 1674559072000}' to topic='twitter-topic'
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @lizahasanova: [24.01.2023] #GDRAGON at Spring-Summer 2023 Haute Couture show in Paris 
+
+cr. voguehongkong
+#GDRAGONxCHANELSS23 
+@IBGDRGN… sending to kafka topic twitter-topic
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 323364517, "id": 1617844131786788864, "text": "RT @lizahasanova: [24.01.2023] #GDRAGON at Spring-Summer 2023 Haute Couture show in Paris \n\ncr. voguehongkong\n#GDRAGONxCHANELSS23 \n@IBGDRGN\u2026", "createdAt": 1674559073000}' to topic='twitter-topic'
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @minoringo_staff: 【🍎歌手活動5周年🍎】
+
+#鈴木みのり
+本日1月24日で歌手活動5周年を迎えました✨
+
+明日にはいよいよ
+✳️3rdアルバム「fruitful spring」
+🧚‍♂️ニューシングル「ミュージカル」
+が発売になります🎧
+
+これからも応援… sending to kafka topic twitter-topic
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 905356823628201984, "id": 1617844130188783619, "text": "RT @minoringo_staff: 【🍎歌手活動5周年🍎】\n\n#鈴木みのり\n本日1月24日で歌手活動5周年を迎えました✨\n\n明日にはいよいよ\n✳️3rdアルバム「fruitful spring」\n🧚\u200D♂️ニューシングル「ミュージカル」\nが発売になります🎧\n\nこれからも応援\u2026", "createdAt": 1674559073000}' to topic='twitter-topic'
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／
+
+1/31(火)まで毎日開催✨
+えらべるPay1,000円分がその場で当たる❗️
+
+✅応募方法
+①@yamazakipan_cp をフォロー
+②この投稿を1/24 23:59までにRT… sending to kafka topic twitter-topic
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1195580111870779393, "id": 1617844138225070082, "text": "RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／\n\n1/31(火)まで毎日開催✨\nえらべるPay1,000円分がその場で当たる❗️\n\n✅応募方法\n①@yamazakipan_cp をフォロー\n②この投稿を1/24 23:59までにRT\u2026", "createdAt": 1674559075000}' to topic='twitter-topic'
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／
+
+1/31(火)まで毎日開催✨
+えらべるPay1,000円分がその場で当たる❗️
+
+✅応募方法
+①@yamazakipan_cp をフォロー
+②この投稿を1/24 23:59までにRT… sending to kafka topic twitter-topic
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1100365590848450560, "id": 1617844147293130753, "text": "RT @yamazakipan_cp: ＼#春のパンまつりカウントダウン キャンペーン🌸／\n\n1/31(火)まで毎日開催✨\nえらべるPay1,000円分がその場で当たる❗️\n\n✅応募方法\n①@yamazakipan_cp をフォロー\n②この投稿を1/24 23:59までにRT\u2026", "createdAt": 1674559077000}' to topic='twitter-topic'
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @1Rain_spring: ٢ رجب  ١٤٤٤هـ
+
+#المطر_والربيع
+شعيب الرويحلي شرق #رغوة صباح الثلاثاء
+تصوير: أحمد الفواز https://t.co/bBzCpc2hpe sending to kafka topic twitter-topic
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2986353554, "id": 1617844146227806209, "text": "RT @1Rain_spring: ٢ رجب  ١٤٤٤هـ\n\n#المطر_والربيع\nشعيب الرويحلي شرق #رغوة صباح الثلاثاء\nتصوير: أحمد الفواز https://t.co/bBzCpc2hpe", "createdAt": 1674559077000}' to topic='twitter-topic'
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text RT @ukr_arthistory: “…Day after day, we [with Leo Kvachevskyy] walked together to sketch during summer, spring, and winter. Arguing and tal… sending to kafka topic twitter-topic
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3136429756, "id": 1617844147733561344, "text": "RT @ukr_arthistory: \u201C\u2026Day after day, we [with Leo Kvachevskyy] walked together to sketch during summer, spring, and winter. Arguing and tal\u2026", "createdAt": 1674559077000}' to topic='twitter-topic'
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.s.s.l.TwitterStatusListener - Received status text @springm385 そっくり🤣- ̗̀ ꪔ̤̥ꪔ̤̮ꪔ̤̫  ̖́- sending to kafka topic twitter-topic
+2023-01-24 12:18:03 [main] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2929807716, "id": 1617844147251216386, "text": "@springm385 そっくり🤣- ̗̀ ꪔ̤̥ꪔ̤̮ꪔ̤̫  ̖́-", "createdAt": 1674559077000}' to topic='twitter-topic'
+2023-01-24 12:18:03 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 94; Timestamp 1674559083131, at time 752281937880916
+2023-01-24 12:18:03 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 95; Timestamp 1674559083133, at time 752281938006958
+2023-01-24 12:18:03 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 96; Timestamp 1674559083137, at time 752281938040791
+2023-01-24 12:18:03 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 107; Timestamp 1674559083134, at time 752281938178375
+2023-01-24 12:18:03 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 108; Timestamp 1674559083139, at time 752281938210125
+2023-01-24 12:18:03 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 97; Timestamp 1674559083138, at time 752281952367333
+2023-01-24 12:18:03 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 98; Timestamp 1674559083139, at time 752281952475375
+2023-01-24 12:18:03 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 96; Timestamp 1674559083130, at time 752281955003708
+2023-01-24 12:18:03 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 97; Timestamp 1674559083132, at time 752281955060041
+2023-01-24 12:18:03 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 98; Timestamp 1674559083135, at time 752281955114833
+2023-01-24 12:18:03 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 99; Timestamp 1674559083135, at time 752281955135833
+2023-01-24 12:18:03 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 100; Timestamp 1674559083136, at time 752281988563750
+2023-01-24 12:18:03 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 101; Timestamp 1674559083136, at time 752281988707500
+2023-01-24 12:18:03 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 102; Timestamp 1674559083138, at time 752281988735166
+2023-01-24 12:18:03 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 103; Timestamp 1674559083140, at time 752281988750916
+2023-01-24 12:18:03 [kafka-producer-network-thread | producer-1] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 104; Timestamp 1674559083140, at time 752281988774875
+2023-01-24 12:18:04 [SpringContextShutdownHook] INFO  c.d.t.a.p.c.s.i.TwitterKafkaProducer - Closing kafka producer
+2023-01-24 12:18:04 [SpringContextShutdownHook] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2023-01-24 12:18:04 [reactor-http-nio-2] WARN  r.n.http.client.HttpClientConnect - [id: 0x7caeaad5, L:0.0.0.0/0.0.0.0:60710] The connection observed an error
+reactor.netty.http.client.PrematureCloseException: Connection prematurely closed DURING response
+2023-01-24 12:18:25 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2023-01-24 12:18:25 [main] WARN  o.s.c.c.c.ConfigServicePropertySourceLocator - Could not locate PropertySource: Could not extract response: no suitable HttpMessageConverter found for response type [class org.springframework.cloud.config.environment.Environment] and content type [text/html;charset=UTF-8]
+2023-01-24 12:18:25 [main] INFO  c.d.t.a.s.s.TwitterExtractionApplication - The following profiles are active: twitter_stream
+2023-01-24 12:18:26 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=a95c3c69-8889-3434-80a6-eb683c3133fe
+2023-01-24 12:18:26 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$802d26dc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-24 12:18:26 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterExtractionApplication': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterV2StreamRunner' defined in file [/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/twitter-stream-service/target/classes/com/di/twitter/analytics/stream/service/runner/impl/TwitterV2StreamRunner.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterV2StreamHelper' defined in file [/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/twitter-stream-service/target/classes/com/di/twitter/analytics/stream/service/runner/impl/TwitterV2StreamHelper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterStatusListener' defined in file [/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/twitter-stream-service/target/classes/com/di/twitter/analytics/stream/service/listener/TwitterStatusListener.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterKafkaProducer' defined in file [/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/event-storage/kafka-producer/target/classes/com/di/twitter/analytics/producer/config/service/impl/TwitterKafkaProducer.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kafkaTemplate' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.kafka.core.KafkaTemplate]: Factory method 'kafkaTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producerFactory' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.kafka.core.ProducerFactory]: Factory method 'producerFactory' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producerConfig' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [java.util.Map]: Factory method 'producerConfig' threw exception; nested exception is java.lang.NullPointerException
+2023-01-24 12:18:26 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-01-24 12:18:26 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterExtractionApplication': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterV2StreamRunner' defined in file [/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/twitter-stream-service/target/classes/com/di/twitter/analytics/stream/service/runner/impl/TwitterV2StreamRunner.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterV2StreamHelper' defined in file [/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/twitter-stream-service/target/classes/com/di/twitter/analytics/stream/service/runner/impl/TwitterV2StreamHelper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterStatusListener' defined in file [/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/twitter-stream-service/target/classes/com/di/twitter/analytics/stream/service/listener/TwitterStatusListener.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterKafkaProducer' defined in file [/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/event-storage/kafka-producer/target/classes/com/di/twitter/analytics/producer/config/service/impl/TwitterKafkaProducer.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kafkaTemplate' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.kafka.core.KafkaTemplate]: Factory method 'kafkaTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producerFactory' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.kafka.core.ProducerFactory]: Factory method 'producerFactory' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producerConfig' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [java.util.Map]: Factory method 'producerConfig' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:62)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.di.twitter.analytics.stream.service.TwitterExtractionApplication.main(TwitterExtractionApplication.java:22)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterV2StreamRunner' defined in file [/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/twitter-stream-service/target/classes/com/di/twitter/analytics/stream/service/runner/impl/TwitterV2StreamRunner.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterV2StreamHelper' defined in file [/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/twitter-stream-service/target/classes/com/di/twitter/analytics/stream/service/runner/impl/TwitterV2StreamHelper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterStatusListener' defined in file [/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/twitter-stream-service/target/classes/com/di/twitter/analytics/stream/service/listener/TwitterStatusListener.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterKafkaProducer' defined in file [/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/event-storage/kafka-producer/target/classes/com/di/twitter/analytics/producer/config/service/impl/TwitterKafkaProducer.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kafkaTemplate' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.kafka.core.KafkaTemplate]: Factory method 'kafkaTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producerFactory' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.kafka.core.ProducerFactory]: Factory method 'producerFactory' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producerConfig' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [java.util.Map]: Factory method 'producerConfig' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterV2StreamHelper' defined in file [/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/twitter-stream-service/target/classes/com/di/twitter/analytics/stream/service/runner/impl/TwitterV2StreamHelper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterStatusListener' defined in file [/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/twitter-stream-service/target/classes/com/di/twitter/analytics/stream/service/listener/TwitterStatusListener.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterKafkaProducer' defined in file [/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/event-storage/kafka-producer/target/classes/com/di/twitter/analytics/producer/config/service/impl/TwitterKafkaProducer.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kafkaTemplate' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.kafka.core.KafkaTemplate]: Factory method 'kafkaTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producerFactory' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.kafka.core.ProducerFactory]: Factory method 'producerFactory' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producerConfig' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [java.util.Map]: Factory method 'producerConfig' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	... 34 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterStatusListener' defined in file [/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/twitter-stream-service/target/classes/com/di/twitter/analytics/stream/service/listener/TwitterStatusListener.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterKafkaProducer' defined in file [/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/event-storage/kafka-producer/target/classes/com/di/twitter/analytics/producer/config/service/impl/TwitterKafkaProducer.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kafkaTemplate' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.kafka.core.KafkaTemplate]: Factory method 'kafkaTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producerFactory' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.kafka.core.ProducerFactory]: Factory method 'producerFactory' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producerConfig' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [java.util.Map]: Factory method 'producerConfig' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	... 48 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterKafkaProducer' defined in file [/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/event-storage/kafka-producer/target/classes/com/di/twitter/analytics/producer/config/service/impl/TwitterKafkaProducer.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kafkaTemplate' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.kafka.core.KafkaTemplate]: Factory method 'kafkaTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producerFactory' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.kafka.core.ProducerFactory]: Factory method 'producerFactory' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producerConfig' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [java.util.Map]: Factory method 'producerConfig' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	... 62 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kafkaTemplate' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.kafka.core.KafkaTemplate]: Factory method 'kafkaTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producerFactory' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.kafka.core.ProducerFactory]: Factory method 'producerFactory' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producerConfig' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [java.util.Map]: Factory method 'producerConfig' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:483)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	... 76 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.kafka.core.KafkaTemplate]: Factory method 'kafkaTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producerFactory' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.kafka.core.ProducerFactory]: Factory method 'producerFactory' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producerConfig' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [java.util.Map]: Factory method 'producerConfig' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	... 90 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producerFactory' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.kafka.core.ProducerFactory]: Factory method 'producerFactory' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producerConfig' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [java.util.Map]: Factory method 'producerConfig' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:483)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.resolveBeanReference(ConfigurationClassEnhancer.java:362)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:334)
+	at com.di.twitter.analytics.producer.config.KafkaProducerConfig$$EnhancerBySpringCGLIB$$365e8647.producerFactory(<generated>)
+	at com.di.twitter.analytics.producer.config.KafkaProducerConfig.kafkaTemplate(KafkaProducerConfig.java:48)
+	at com.di.twitter.analytics.producer.config.KafkaProducerConfig$$EnhancerBySpringCGLIB$$365e8647.CGLIB$kafkaTemplate$2(<generated>)
+	at com.di.twitter.analytics.producer.config.KafkaProducerConfig$$EnhancerBySpringCGLIB$$365e8647$$FastClassBySpringCGLIB$$4a1c9cc2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.di.twitter.analytics.producer.config.KafkaProducerConfig$$EnhancerBySpringCGLIB$$365e8647.kafkaTemplate(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 91 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.kafka.core.ProducerFactory]: Factory method 'producerFactory' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producerConfig' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [java.util.Map]: Factory method 'producerConfig' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	... 114 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producerConfig' defined in class path resource [com/di/twitter/analytics/producer/config/KafkaProducerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [java.util.Map]: Factory method 'producerConfig' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:483)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.resolveBeanReference(ConfigurationClassEnhancer.java:362)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:334)
+	at com.di.twitter.analytics.producer.config.KafkaProducerConfig$$EnhancerBySpringCGLIB$$365e8647.producerConfig(<generated>)
+	at com.di.twitter.analytics.producer.config.KafkaProducerConfig.producerFactory(KafkaProducerConfig.java:43)
+	at com.di.twitter.analytics.producer.config.KafkaProducerConfig$$EnhancerBySpringCGLIB$$365e8647.CGLIB$producerFactory$0(<generated>)
+	at com.di.twitter.analytics.producer.config.KafkaProducerConfig$$EnhancerBySpringCGLIB$$365e8647$$FastClassBySpringCGLIB$$4a1c9cc2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.di.twitter.analytics.producer.config.KafkaProducerConfig$$EnhancerBySpringCGLIB$$365e8647.producerFactory(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 115 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [java.util.Map]: Factory method 'producerConfig' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	... 138 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at com.di.twitter.analytics.producer.config.KafkaProducerConfig.producerConfig(KafkaProducerConfig.java:32)
+	at com.di.twitter.analytics.producer.config.KafkaProducerConfig$$EnhancerBySpringCGLIB$$365e8647.CGLIB$producerConfig$1(<generated>)
+	at com.di.twitter.analytics.producer.config.KafkaProducerConfig$$EnhancerBySpringCGLIB$$365e8647$$FastClassBySpringCGLIB$$4a1c9cc2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.di.twitter.analytics.producer.config.KafkaProducerConfig$$EnhancerBySpringCGLIB$$365e8647.producerConfig(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 139 common frames omitted

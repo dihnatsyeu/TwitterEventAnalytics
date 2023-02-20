@@ -1,0 +1,14 @@
+2023-01-10 13:42:20 [main] INFO  c.t.e.TwitterExtractionApplication - Starting TwitterExtractionApplication on Dzmitrys-MacBook-Pro.local with PID 61815 (/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/twitter-extractor/target/classes started by dzmitryihnatsyeu in /Users/dzmitryihnatsyeu/development/TwitterEventAnalytics)
+2023-01-10 13:42:20 [main] INFO  c.t.e.TwitterExtractionApplication - No active profile set, falling back to default profiles: default
+2023-01-10 13:42:20 [main] INFO  c.t.e.TwitterExtractionApplication - Started TwitterExtractionApplication in 0.307 seconds (JVM running for 0.637)
+2023-01-10 13:42:20 [main] INFO  c.t.e.runner.TwitterExtractorRunner - [Java, Microservices, Spring, Kafla, Elasticsearch]
+2023-01-10 13:42:55 [main] INFO  c.t.e.TwitterExtractionApplication - Starting TwitterExtractionApplication on Dzmitrys-MacBook-Pro.local with PID 61885 (/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/twitter-extractor/target/classes started by dzmitryihnatsyeu in /Users/dzmitryihnatsyeu/development/TwitterEventAnalytics)
+2023-01-10 13:42:55 [main] INFO  c.t.e.TwitterExtractionApplication - No active profile set, falling back to default profiles: default
+2023-01-10 13:42:55 [main] INFO  c.t.e.TwitterExtractionApplication - Started TwitterExtractionApplication in 0.275 seconds (JVM running for 0.549)
+2023-01-10 13:42:55 [main] INFO  c.t.e.TwitterExtractionApplication - Applications runs
+2023-01-10 13:42:55 [main] INFO  c.t.e.runner.TwitterExtractorRunner - [Java, Microservices, Spring, Kafla, Elasticsearch]
+2023-01-10 13:44:59 [main] INFO  c.t.e.TwitterExtractionApplication - Starting TwitterExtractionApplication on Dzmitrys-MacBook-Pro.local with PID 62113 (/Users/dzmitryihnatsyeu/development/TwitterEventAnalytics/twitter-extractor/target/classes started by dzmitryihnatsyeu in /Users/dzmitryihnatsyeu/development/TwitterEventAnalytics)
+2023-01-10 13:44:59 [main] INFO  c.t.e.TwitterExtractionApplication - No active profile set, falling back to default profiles: default
+2023-01-10 13:44:59 [main] INFO  c.t.e.TwitterExtractionApplication - Started TwitterExtractionApplication in 0.252 seconds (JVM running for 0.724)
+2023-01-10 13:44:59 [main] INFO  c.t.e.TwitterExtractionApplication - Applications runs
+2023-01-10 13:44:59 [main] INFO  c.t.e.runner.TwitterExtractorRunner - Starting twitter feed....

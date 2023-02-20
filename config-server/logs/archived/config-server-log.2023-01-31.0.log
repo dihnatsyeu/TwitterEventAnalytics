@@ -1,0 +1,22 @@
+2023-01-31 19:45:15 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.5.Final
+2023-01-31 19:45:16 [main] INFO  c.d.t.a.c.s.ConfigServerApplication - No active profile set, falling back to default profiles: default
+2023-01-31 19:45:16 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=1c88aa43-e087-3b0f-954e-41c70f3f983e
+2023-01-31 19:45:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-01-31 19:45:16 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-01-31 19:45:16 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-31 19:45:16 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2023-01-31 19:45:16 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-01-31 19:45:16 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 632 ms
+2023-01-31 19:45:16 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-31 19:45:18 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/actuator/**'], []
+2023-01-31 19:45:18 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f8f40cc, org.springframework.security.web.context.SecurityContextPersistenceFilter@5cbe72b9, org.springframework.security.web.header.HeaderWriterFilter@35f01759, org.springframework.security.web.csrf.CsrfFilter@8b1202a, org.springframework.security.web.authentication.logout.LogoutFilter@69bca406, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4af7ac25, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@f2becb2, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@14d81f2c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@36638b59, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e993715, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3bdbf8d3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5dd3727c, org.springframework.security.web.session.SessionManagementFilter@2aa07d80, org.springframework.security.web.access.ExceptionTranslationFilter@12e2f5ab, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f65a203]
+2023-01-31 19:45:18 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-01-31 19:45:18 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-01-31 19:45:18 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-01-31 19:45:18 [main] INFO  c.d.t.a.c.s.ConfigServerApplication - Started ConfigServerApplication in 2.798 seconds (JVM running for 3.258)
+2023-01-31 19:45:19 [RMI TCP Connection(3)-192.168.0.233] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-31 19:45:19 [RMI TCP Connection(3)-192.168.0.233] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-01-31 19:45:19 [RMI TCP Connection(3)-192.168.0.233] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2023-01-31 19:46:38 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: file:/var/folders/v9/2flyrmzs095fr2xn7vlqpw340000gn/T/config-repo-10713917158178613310/config-client-twitter_stream.yml
+2023-01-31 19:46:38 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: file:/var/folders/v9/2flyrmzs095fr2xn7vlqpw340000gn/T/config-repo-10713917158178613310/config-client.yml
+2023-01-31 19:46:56 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

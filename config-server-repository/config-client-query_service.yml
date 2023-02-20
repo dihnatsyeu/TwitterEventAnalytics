@@ -1,0 +1,33 @@
+query-service:
+  version: v1
+
+server:
+  port: 8183
+  servlet:
+    context-path: /query-service
+
+elastic-query-config:
+  text-field: text
+
+
+elastic-config:
+  is-repository: false
+  index-name: twitter-index
+  connection-url: http://localhost:9200
+  connect-timeout-ms: 5000
+  socket-timeout-ms: 30000
+
+user-config:
+  username: test
+  password: "PasswordTest"
+  roles: USER
+
+springdoc:
+  api-docs:
+    path: /api-docs
+
+  swagger-ui:
+    path: /swagger-ui.html
+
+security:
+  path-to-ignore: /api-docs
